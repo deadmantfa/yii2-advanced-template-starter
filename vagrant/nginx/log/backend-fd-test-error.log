@@ -1,8 +1,0 @@
-2019/09/10 09:25:46 [error] 9416#9416: *2 FastCGI sent in stderr: "PHP message: PHP Warning:  Invalid argument supplied for foreach() in /app/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 122
-PHP message: PHP Stack trace:
-PHP message: PHP   1. {main}() /app/backend/web/index.php:0
-PHP message: PHP   2. yii\helpers\BaseArrayHelper::merge() /app/backend/web/index.php:14" while reading response header from upstream, client: 192.168.83.1, server: back.fd.test, request: "GET /user/login HTTP/2.0", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "back.fd.test", referrer: "https://back.fd.test/user/register"
-2019/09/10 09:32:23 [error] 9416#9416: *8 FastCGI sent in stderr: "PHP message: PHP Warning:  Invalid argument supplied for foreach() in /app/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 122
-PHP message: PHP Stack trace:
-PHP message: PHP   1. {main}() /app/backend/web/index.php:0
-PHP message: PHP   2. yii\helpers\BaseArrayHelper::merge() /app/backend/web/index.php:14" while reading response header from upstream, client: 192.168.83.1, server: back.fd.test, request: "GET /user/login HTTP/2.0", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "back.fd.test", referrer: "https://back.fd.test/user/register"

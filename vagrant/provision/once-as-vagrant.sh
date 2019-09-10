@@ -20,6 +20,8 @@ composer --no-progress --prefer-dist install
 
 info "Init project"
 ./init --env=Development --overwrite=y
+rm -f /app/common/config/main-local-example.php
+rm -f /app/common/config/test-local-example.php
 
 info "Apply migrations"
 ./yii migrate --interactive=0

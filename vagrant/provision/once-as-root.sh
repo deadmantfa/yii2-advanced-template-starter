@@ -33,24 +33,28 @@ apt-get update
 apt-get upgrade -y
 
 info "Remove old files"
-rm -f /app/common/config/main-local.log 2> /dev/null
-rm -f /app/common/config/test-local.log 2> /dev/null
-rm -f /app/common/config/params-local.log 2> /dev/null
-rm -f /app/common/config/codeception-local.log 2> /dev/null
+rm -f /app/environments/dev/common/config/main-local.php 2> /dev/null
+rm -f /app/environments/dev/common/config/test-local.php 2> /dev/null
+rm -f /app/common/config/main-local.php 2> /dev/null
+rm -f /app/common/config/test-local.php 2> /dev/null
+rm -f /app/common/config/main-local-example.php 2> /dev/null
+rm -f /app/common/config/test-local-example.php 2> /dev/null
+rm -f /app/common/config/params-local.php 2> /dev/null
+rm -f /app/common/config/codeception-local.php 2> /dev/null
 
-rm -f /app/console/config/main-local.log 2> /dev/null
-rm -f /app/console/config/test-local.log 2> /dev/null
-rm -f /app/console/config/params-local.log 2> /dev/null
+rm -f /app/console/config/main-local.php 2> /dev/null
+rm -f /app/console/config/test-local.php 2> /dev/null
+rm -f /app/console/config/params-local.php 2> /dev/null
 
-rm -f /app/backend/config/main-local.log 2> /dev/null
-rm -f /app/backend/config/test-local.log 2> /dev/null
-rm -f /app/backend/config/params-local.log 2> /dev/null
-rm -f /app/backend/config/codeception-local.log 2> /dev/null
+rm -f /app/backend/config/main-local.php 2> /dev/null
+rm -f /app/backend/config/test-local.php 2> /dev/null
+rm -f /app/backend/config/params-local.php 2> /dev/null
+rm -f /app/backend/config/codeception-local.php 2> /dev/null
 
-rm -f /app/frontend/config/main-local.log 2> /dev/null
-rm -f /app/frontend/config/test-local.log 2> /dev/null
-rm -f /app/frontend/config/params-local.log 2> /dev/null
-rm -f /app/frontend/config/codeception-local.log 2> /dev/null
+rm -f /app/frontend/config/main-local.php 2> /dev/null
+rm -f /app/frontend/config/test-local.php 2> /dev/null
+rm -f /app/frontend/config/params-local.php 2> /dev/null
+rm -f /app/frontend/config/codeception-local.php 2> /dev/null
 
 rm -rf /app/vendor 2> /dev/null
 rm -f /app/composer.lock 2> /dev/null

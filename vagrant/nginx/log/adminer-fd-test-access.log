@@ -1,0 +1,2 @@
+192.168.83.1 - - [10/Sep/2019:09:26:36 +0100] "GET / HTTP/2.0" 200 1276 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+192.168.83.1 - - [10/Sep/2019:09:26:36 +0100] "GET /adminer.css?v=3892337156 HTTP/2.0" 304 0 "https://db.fd.test/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"

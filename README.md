@@ -30,3 +30,5 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * Notifications
 * Chat
 * Production ready
+* Automated Testing
+

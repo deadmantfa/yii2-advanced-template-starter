@@ -17,7 +17,7 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * Relationship Trait (Save Related Models) - [Yii2 Relation Trait](https://github.com/mootensai/yii2-relation-trait)
 * [ElasticSearch & Kibana](https://www.elastic.co/products/elastic-stack)
 * Local SSL - [mkcert](https://github.com/FiloSottile/mkcert) 
-* Vagrant - [mkcert](https://github.com/FiloSottile/mkcert) 
+* Vagrant - [Vagrant](https://www.vagrantup.com/) 
 
 **@TODO**
 * Better Readme with more instructions

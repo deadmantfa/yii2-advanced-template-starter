@@ -1,60 +1,32 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
-    <br>
-</p>
+<h1 align="center">Yii 2 Advanced Project Template With Few Additions</h1>
 
 Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
 developing complex Web applications with multiple tiers.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+Uses Vagrant development environment, local usage without vagrant is possible but will not be supported by me there are other tutorials that can help you.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+## Not Ready for Production yet
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+### Already Done
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+* User Module, RBAC & 2FA - [Yii2 Usaruio](https://yii2-usuario.readthedocs.io/en/latest/)
+* ElasticSearch Implementation - [Yii2 ElasticSearch](https://github.com/Mirocow/yii2-elasticsearch)
+* ElasticSearch Logs - [Yii2 ElasticSearch Log](https://github.com/Mirocow/yii2-elasticsearch-log)
+* ElasticSearch Debug - [Yii2 ElasticSearch Debug](https://github.com/Mirocow/yii2-elasticsearch-debug)
+* Enhanced Gii - [Yii2 Enhanced Gii](https://github.com/mootensai/yii2-enhanced-gii)
+* Relationship Trait (Save Related Models) - [Yii2 Relation Trait](https://github.com/mootensai/yii2-relation-trait)
+* [ElasticSearch & Kibana](https://www.elastic.co/products/elastic-stack)
+* Local SSL - [mkcert](https://github.com/FiloSottile/mkcert) 
+* Vagrant - [mkcert](https://github.com/FiloSottile/mkcert) 
 
-DIRECTORY STRUCTURE
--------------------
-
-```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-    tests/               contains tests for common classes    
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application    
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for frontend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-```
+**@TODO**
+* Better Readme with more instructions
+* API Structure
+* OAuth2 Server Implementation
+* OAuth Client Implementation
+* Admin Theme (All suggestions are welcomed) use the issue tracker
+* Audit Trail
+* Impersonation
+* Notifications
+* Chat
+* Production ready

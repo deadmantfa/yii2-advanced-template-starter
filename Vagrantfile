@@ -22,6 +22,7 @@ domains = {
   api:  'api.' + options['domain'],
   adminer:  'db.' + options['domain'],
   kibana:  'kibana.' + options['domain']
+  requirements:  'req.' + options['domain']
 }
 
 # check github token

@@ -1,17 +1,19 @@
 {
-  "name": "yiisoft/yii2-app-advanced",
-  "description": "Yii 2 Advanced Project Template",
+  "name": "deadmantfa/yii2-advanced-template-starter",
+  "description": "Yii 2 Advanced Project Template With Few Additions",
   "keywords": [
     "yii2",
     "framework",
     "advanced",
-    "project template"
+    "project template",
+    "Vagrant",
+    "ElasticSearch"
   ],
   "homepage": "http://www.yiiframework.com/",
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+    "issues": "https://github.com/deadmantfa/yii2-advanced-template-starter/issues?state=open",
     "forum": "http://www.yiiframework.com/forum/",
     "wiki": "http://www.yiiframework.com/wiki/",
     "irc": "irc://irc.freenode.net/yii",

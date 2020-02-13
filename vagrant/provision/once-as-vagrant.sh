@@ -6,6 +6,10 @@ source /app/vagrant/provision/common.sh
 
 # shellcheck disable=SC2116
 github_token=$(echo "$1")
+email=$(echo "$2")
+username=$(echo "$3")
+password=$(echo "$4")
+role=$(echo "$4")
 
 #== Provision script ==
 
@@ -27,6 +31,8 @@ rm -f /app/common/config/test-local-example.php
 info "Apply migrations"
 ./yii migrate --interactive=0
 ./yii_test migrate --interactive=0
+./yii user/create "${email}" "${username}" "${password}" "${role}"
+./yii user/confirm "${email}"
 
 info "Create bash-alias 'app' for vagrant user"
 echo 'alias app="cd /app"' | tee /home/vagrant/.bash_aliases

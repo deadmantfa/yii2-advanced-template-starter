@@ -10,6 +10,12 @@ domain: <your-wildcard-domain-name-without-asterisk>
 database: <your-main-database-name>
 database_test: <your-test-database-name>
 
+# Admin User Information
+email: <your-admin-email-id>
+username: <your-admin-username>
+password: <your-admin-password> #do not enter special char
+role: <your-admin-role> #if name of role is not admin please make changes to the config file in yii2
+
 # Guest OS timezone
 timezone: Europe/London
 

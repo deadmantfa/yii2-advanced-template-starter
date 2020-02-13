@@ -12,25 +12,17 @@ database_test=$(echo "$4")
 
 #== Provision script ==
 
-info "Provision-script user: `whoami`"
+info "Provision-script user: $(whoami)"
 
 export DEBIAN_FRONTEND=noninteractive
 
 info "Configure timezone"
-timedatectl set-timezone ${timezone} --no-ask-password
+timedatectl set-timezone "${timezone}" --no-ask-password
 
 info "Prepare root password for MySQL"
 debconf-set-selections <<< "mysql-community-server mysql-community-server/root-pass password \"''\""
 debconf-set-selections <<< "mysql-community-server mysql-community-server/re-root-pass password \"''\""
 echo "Done!"
-
-info "Update OS software"
-rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
-apt-get update
-apt-get upgrade -y
 
 info "Remove old files"
 rm -f /app/environments/dev/common/config/main-local.php 2> /dev/null
@@ -62,23 +54,23 @@ info "Done"
 
 
 info "Local SSL"
-cd ~
-apt install libnss3-tools -y
-wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64
+cd ~ || exit
+apt-get install libnss3-tools -y
+wget -q https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64 > /dev/null 2>&1
 mv mkcert-v1.4.0-linux-amd64 mkcert
 chmod +x mkcert
 cp mkcert /usr/local/bin/
 export CAROOT=/app/vagrant/nginx/ssl/root/
-mkcert -install
-mkcert "*.${domain}"
+mkcert -install > /dev/null 2>&1
+mkcert "*.${domain}" > /dev/null 2>&1
 cp "/root/_wildcard.${domain}.pem" /app/vagrant/nginx/ssl/.
 cp "/root/_wildcard.${domain}-key.pem" /app/vagrant/nginx/ssl/.
 rm -Rf /app/vagrant/nginx/ssl/root/rootCA.crt
-openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/vagrant/nginx/ssl/root/rootCA.crt
+openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/vagrant/nginx/ssl/root/rootCA.crt > /dev/null 2>&1
 echo "Done!"
 
 info "Install additional software"
-apt-get install -y php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug curl apache2-utils apt-transport-https openjdk-8-jre
+apt-get install -y php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug
 
 info "Configure MySQL"
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -111,8 +103,8 @@ ln -s /app/vagrant/nginx/app.conf /etc/nginx/sites-enabled/app.conf
 echo "Done!"
 
 info "Initailize databases for MySQL"
-mysql -uroot <<< "CREATE DATABASE ${database}"
-mysql -uroot <<< "CREATE DATABASE ${database_test}"
+mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database}"
+mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database_test}"
 sed "s/yii2advanced/$database/g" /app/environments/dev/common/config/main-local-example.php > /app/environments/dev/common/config/main-local.php
 sed "s/yii2advanced_test/$database_test/g" /app/environments/dev/common/config/test-local-example.php > /app/environments/dev/common/config/test-local.php
 echo "Done!"
@@ -120,17 +112,4 @@ echo "Done!"
 info "Install composer"
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-info "Install ElasticSearch"
-apt-get install -y elasticsearch
-systemctl start elasticsearch
-systemctl enable elasticsearch
-sleep 20
-curl -X GET "localhost:9200"
-echo "Done!"
-
-info "Install Kibana"
-apt-get install -y kibana
-systemctl enable kibana
-systemctl start kibana
 htpasswd -cb /etc/nginx/htpasswd.users vagrant vagrant
-echo "Done!"

@@ -4,6 +4,7 @@ source /app/vagrant/provision/common.sh
 
 #== Import script args ==
 
+# shellcheck disable=SC2116
 github_token=$(echo "$1")
 
 #== Provision script ==
@@ -15,8 +16,8 @@ composer config --global github-oauth.github.com ${github_token}
 echo "Done!"
 
 info "Install project dependencies"
-cd /app
-composer --no-progress --prefer-dist install
+cd /app || exit
+composer --no-progress --prefer-dist -q install
 
 info "Init project"
 ./init --env=Development --overwrite=y

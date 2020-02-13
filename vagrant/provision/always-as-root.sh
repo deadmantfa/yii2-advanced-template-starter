@@ -4,7 +4,7 @@ source /app/vagrant/provision/common.sh
 
 #== Provision script ==
 
-info "Provision-script user: `whoami`"
+info "Provision-script user: $(whoami)"
 
 info "Restart web-stack"
 service php7.2-fpm restart

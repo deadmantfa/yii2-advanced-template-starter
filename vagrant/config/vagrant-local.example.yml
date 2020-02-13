@@ -17,7 +17,7 @@ timezone: Europe/London
 box_check_update: false
 
 # Virtual machine name
-machine_name: y2aa
+machine_name: yii2-test-drive
 
 # Virtual machine IP
 ip: 192.168.83.137
@@ -26,4 +26,4 @@ ip: 192.168.83.137
 cpus: 2
 
 # Virtual machine RAM
-memory: 2048
+memory: 4096

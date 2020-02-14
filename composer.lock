@@ -1,20 +1,20 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "cd62ac5bb0b98ec0943c8866286a8736",
-    "packages": [
-        {
-            "name": "2amigos/2fa-library",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/2fa-library.git",
-                "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
-            },
-            "dist": {
+  "_readme": [
+    "This file locks the dependencies of your project to a known state",
+    "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+    "This file is @generated automatically"
+  ],
+  "content-hash": "7503f38861d1ba010836c5232410fe19",
+  "packages": [
+    {
+      "name": "2amigos/2fa-library",
+      "version": "1.0.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/2amigos/2fa-library.git",
+        "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
+      },
+      "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/2amigos/2fa-library/zipball/d74e8cd99021d5b994a2690a82298627a1017305",
                 "reference": "d74e8cd99021d5b994a2690a82298627a1017305",
@@ -574,24 +574,87 @@
                     "email": "creocoder@gmail.com"
                 }
             ],
-            "description": "The nested sets behavior for the Yii framework",
-            "keywords": [
-                "nested sets",
-                "yii2"
-            ],
-            "time": "2015-01-27T10:53:51+00:00"
+          "description": "The nested sets behavior for the Yii framework",
+          "keywords": [
+            "nested sets",
+            "yii2"
+          ],
+          "time": "2015-01-27T10:53:51+00:00"
+        },
+    {
+      "name": "defuse/php-encryption",
+      "version": "v2.2.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/defuse/php-encryption.git",
+        "reference": "0f407c43b953d571421e0020ba92082ed5fb7620"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/defuse/php-encryption/zipball/0f407c43b953d571421e0020ba92082ed5fb7620",
+        "reference": "0f407c43b953d571421e0020ba92082ed5fb7620",
+        "shasum": ""
+      },
+      "require": {
+        "ext-openssl": "*",
+        "paragonie/random_compat": ">= 2",
+        "php": ">=5.4.0"
+      },
+      "require-dev": {
+        "nikic/php-parser": "^2.0|^3.0|^4.0",
+        "phpunit/phpunit": "^4|^5"
+      },
+      "bin": [
+        "bin/generate-defuse-key"
+      ],
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Defuse\\Crypto\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Taylor Hornby",
+          "email": "taylor@defuse.ca",
+          "homepage": "https://defuse.ca/"
         },
         {
-            "name": "doctrine/lexer",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+          "name": "Scott Arciszewski",
+          "email": "info@paragonie.com",
+          "homepage": "https://paragonie.com"
+        }
+      ],
+      "description": "Secure PHP Encryption Library",
+      "keywords": [
+        "aes",
+        "authenticated encryption",
+        "cipher",
+        "crypto",
+        "cryptography",
+        "encrypt",
+        "encryption",
+        "openssl",
+        "security",
+        "symmetric key cryptography"
+      ],
+      "time": "2018-07-24T23:27:56+00:00"
+    },
+    {
+      "name": "doctrine/lexer",
+      "version": "1.2.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/doctrine/lexer.git",
+        "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
                 "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
                 "shasum": ""
             },
@@ -643,20 +706,20 @@
             ],
             "time": "2019-10-30T14:39:59+00:00"
         },
-        {
-            "name": "egulias/email-validator",
-            "version": "2.1.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "5065fafc8c29d229ff207f2a89b02175f479a909"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/5065fafc8c29d229ff207f2a89b02175f479a909",
-                "reference": "5065fafc8c29d229ff207f2a89b02175f479a909",
-                "shasum": ""
-            },
+    {
+      "name": "egulias/email-validator",
+      "version": "2.1.17",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/egulias/EmailValidator.git",
+        "reference": "ade6887fd9bd74177769645ab5c474824f8a418a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ade6887fd9bd74177769645ab5c474824f8a418a",
+        "reference": "ade6887fd9bd74177769645ab5c474824f8a418a",
+        "shasum": ""
+      },
             "require": {
                 "doctrine/lexer": "^1.0.1",
                 "php": ">=5.5",
@@ -699,7 +762,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-02-12T22:28:28+00:00"
+      "time": "2020-02-13T22:36:52+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",
@@ -2749,26 +2812,208 @@
                     "role": "Developer"
                 }
             ],
-            "description": "QR code decoder / reader",
-            "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
-            "keywords": [
-                "barcode",
-                "qr",
-                "zxing"
-            ],
-            "time": "2018-04-26T11:41:33+00:00"
+          "description": "QR code decoder / reader",
+          "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
+          "keywords": [
+            "barcode",
+            "qr",
+            "zxing"
+          ],
+          "time": "2018-04-26T11:41:33+00:00"
+        },
+    {
+      "name": "lcobucci/jwt",
+      "version": "3.3.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/lcobucci/jwt.git",
+        "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/lcobucci/jwt/zipball/a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+        "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+        "shasum": ""
+      },
+      "require": {
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "php": "^5.6 || ^7.0"
+      },
+      "require-dev": {
+        "mikey179/vfsstream": "~1.5",
+        "phpmd/phpmd": "~2.2",
+        "phpunit/php-invoker": "~1.1",
+        "phpunit/phpunit": "^5.7 || ^7.3",
+        "squizlabs/php_codesniffer": "~2.3"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "3.1-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Lcobucci\\JWT\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
+        {
+          "name": "Luís Otávio Cobucci Oblonczyk",
+          "email": "lcobucci@gmail.com",
+          "role": "Developer"
+        }
+      ],
+      "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+      "keywords": [
+        "JWS",
+        "jwt"
+      ],
+      "time": "2019-05-24T18:30:49+00:00"
+    },
+    {
+      "name": "league/event",
+      "version": "2.2.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/thephpleague/event.git",
+        "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+        "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.4.0"
+      },
+      "require-dev": {
+        "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+        "phpspec/phpspec": "^2.2"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.2-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "League\\Event\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Frank de Jonge",
+          "email": "info@frenky.net"
+        }
+      ],
+      "description": "Event package",
+      "keywords": [
+        "emitter",
+        "event",
+        "listener"
+      ],
+      "time": "2018-11-26T11:52:41+00:00"
+    },
+    {
+      "name": "league/oauth2-server",
+      "version": "8.0.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/thephpleague/oauth2-server.git",
+        "reference": "e1dc4d708c56fcfa205be4bb1862b6d525b4baac"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/e1dc4d708c56fcfa205be4bb1862b6d525b4baac",
+        "reference": "e1dc4d708c56fcfa205be4bb1862b6d525b4baac",
+        "shasum": ""
+      },
+      "require": {
+        "defuse/php-encryption": "^2.2.1",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "lcobucci/jwt": "^3.3.1",
+        "league/event": "^2.2",
+        "php": ">=7.1.0",
+        "psr/http-message": "^1.0.1"
+      },
+      "replace": {
+        "league/oauth2server": "*",
+        "lncd/oauth2": "*"
+      },
+      "require-dev": {
+        "phpstan/phpstan": "^0.11.8",
+        "phpstan/phpstan-phpunit": "^0.11.2",
+        "phpunit/phpunit": "^7.5.13 || ^8.2.3",
+        "roave/security-advisories": "dev-master",
+        "zendframework/zend-diactoros": "^2.1.2"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "League\\OAuth2\\Server\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Alex Bilbie",
+          "email": "hello@alexbilbie.com",
+          "homepage": "http://www.alexbilbie.com",
+          "role": "Developer"
         },
         {
-            "name": "mirocow/yii2-elasticsearch",
-            "version": "1.0.22",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Mirocow/yii2-elasticsearch.git",
-                "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Mirocow/yii2-elasticsearch/zipball/e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
+          "name": "Andy Millington",
+          "email": "andrew@noexceptions.io",
+          "homepage": "https://www.noexceptions.io",
+          "role": "Developer"
+        }
+      ],
+      "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
+      "homepage": "https://oauth2.thephpleague.com/",
+      "keywords": [
+        "Authentication",
+        "api",
+        "auth",
+        "authorisation",
+        "authorization",
+        "oauth",
+        "oauth 2",
+        "oauth 2.0",
+        "oauth2",
+        "protect",
+        "resource",
+        "secure",
+        "server"
+      ],
+      "time": "2019-07-13T18:58:26+00:00"
+    },
+    {
+      "name": "mirocow/yii2-elasticsearch",
+      "version": "1.0.22",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Mirocow/yii2-elasticsearch.git",
+        "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Mirocow/yii2-elasticsearch/zipball/e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
                 "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
                 "shasum": ""
             },
@@ -3445,26 +3690,76 @@
             "homepage": "https://github.com/PHPOffice/PHPExcel",
             "keywords": [
                 "OpenXML",
-                "excel",
-                "php",
-                "spreadsheet",
-                "xls",
-                "xlsx"
+              "excel",
+              "php",
+              "spreadsheet",
+              "xls",
+              "xlsx"
             ],
-            "abandoned": "phpoffice/phpspreadsheet",
-            "time": "2018-11-22T23:07:24+00:00"
+          "abandoned": "phpoffice/phpspreadsheet",
+          "time": "2018-11-22T23:07:24+00:00"
         },
+    {
+      "name": "psr/http-message",
+      "version": "1.0.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/http-message.git",
+        "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+        "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.3.0"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Http\\Message\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
         {
-            "name": "psr/log",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
+          "name": "PHP-FIG",
+          "homepage": "http://www.php-fig.org/"
+        }
+      ],
+      "description": "Common interface for HTTP messages",
+      "homepage": "https://github.com/php-fig/http-message",
+      "keywords": [
+        "http",
+        "http-message",
+        "psr",
+        "psr-7",
+        "request",
+        "response"
+      ],
+      "time": "2016-08-06T14:39:51+00:00"
+    },
+    {
+      "name": "psr/log",
+      "version": "1.1.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/log.git",
+        "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
                 "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
                 "shasum": ""
             },
@@ -5614,56 +5909,6 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
-            "name": "psr/http-message",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2016-08-06T14:39:51+00:00"
-        },
-        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -6959,20 +7204,20 @@
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2019-06-13T22:48:21+00:00"
         },
-        {
-            "name": "webmozart/assert",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
-                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/573381c0a64f155a0d9a23f4b0c797194805b925",
-                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925",
-                "shasum": ""
-            },
+      {
+        "name": "webmozart/assert",
+        "version": "1.7.0",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/webmozart/assert.git",
+          "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
+          "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+          "shasum": ""
+        },
             "require": {
                 "php": "^5.3.3 || ^7.0",
                 "symfony/polyfill-ctype": "^1.8"
@@ -7005,7 +7250,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2019-11-24T13:36:37+00:00"
+        "time": "2020-02-14T12:15:55+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -7116,7 +7361,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6.0"
+      "php": ">=5.6.0",
+      "ext-json": "*"
     },
     "platform-dev": []
 }

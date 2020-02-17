@@ -18,11 +18,11 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * [ElasticSearch & Kibana](https://www.elastic.co/products/elastic-stack)
 * Local SSL - [mkcert](https://github.com/FiloSottile/mkcert) 
 * Vagrant - [Vagrant](https://www.vagrantup.com/) 
+* API Structure
 
 **@TODO**
 * Better Readme with more instructions
-* API Structure
-* OAuth2 Server Implementation
+* OAuth2 Server Implementation (Some part is done need help here)
 * OAuth Client Implementation
 * Admin Theme (All suggestions are welcomed) use the issue tracker
 * Audit Trail

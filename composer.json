@@ -36,8 +36,8 @@
     "mirocow/yii2-elasticsearch": "*",
     "mirocow/yii2-elasticsearch-log": "*",
     "mirocow/yii2-elasticsearch-debug": "*",
-    "league/oauth2-server": "^8.0.0",
-    "ext-json": "*"
+    "ext-json": "*",
+    "chervand/yii2-oauth2-server": "^0.7.1"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

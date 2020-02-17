@@ -3,7 +3,11 @@
 
 namespace api\components\traits;
 
-use yii\filters\Cors;
+use chervand\yii2\oauth2\server\components\AuthMethods\HttpBearerAuth;
+use chervand\yii2\oauth2\server\components\AuthMethods\HttpMacAuth;
+use Yii;
+use yii\filters\auth\CompositeAuth;
+use yii\filters\RateLimiter;
 
 trait CommonTrait
 {
@@ -12,18 +16,29 @@ trait CommonTrait
         $behaviors = parent::behaviors();
 
         // remove authentication filter
-        $auth = $behaviors['authenticator'];
         unset($behaviors['authenticator']);
-
-        // add CORS filter
-        $behaviors['corsFilter'] = [
-            'class' => Cors::class,
-        ];
+        unset($behaviors['rateLimiter']);
+        $auth = Yii::$app->getModule('oauth2');
 
         // re-add authentication filter
-        $behaviors['authenticator'] = $auth;
-        // avoid authentication on CORS-pre-flight requests (HTTP OPTIONS method)
-        $behaviors['authenticator']['except'] = ['options'];
+        $behaviors['authenticator'] = [
+            'class' => CompositeAuth::class,
+            'authMethods' => [
+                [
+                    'class' => HttpMacAuth::class,
+                    'publicKey' => $auth->publicKey,
+                    'cache' => $auth->cache,
+                ],
+                [
+                    'class' => HttpBearerAuth::class,
+                    'publicKey' => $auth->publicKey,
+                    'cache' => $auth->cache,
+                ],
+            ]
+        ];
+        $behaviors['rateLimiter'] = [
+            'class' => RateLimiter::class,
+        ];
 
         return $behaviors;
     }

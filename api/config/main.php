@@ -1,6 +1,15 @@
 <?php
 
+use chervand\yii2\oauth2\server\components\Grant\RevokeGrant;
+use chervand\yii2\oauth2\server\Module;
 use Da\User\Contracts\MailChangeStrategyInterface;
+use League\OAuth2\Server\Grant\ClientCredentialsGrant;
+use League\OAuth2\Server\Grant\ImplicitGrant;
+use League\OAuth2\Server\Grant\PasswordGrant;
+use League\OAuth2\Server\Grant\RefreshTokenGrant;
+use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
+use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
+use yii\caching\FileDependency;
 use yii\web\Response;
 
 $params = array_merge(
@@ -13,8 +22,41 @@ $params = array_merge(
 return [
     'id' => 'app-api',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'oauth2'],
     'modules' => [
+        'oauth2' => [
+            'class' => Module::class,
+            'privateKey' => __DIR__ . '/../oauth2/private.key',
+            'publicKey' => __DIR__ . '/../oauth2/public.key',
+            'cache' => [
+                AccessTokenRepositoryInterface::class => [
+                    'cacheDuration' => 3600,
+                    'cacheDependency' => new FileDependency(['fileName' => 'AccessTokenRepositoryInterface.txt']),
+                ],
+                RefreshTokenRepositoryInterface::class => [
+                    'cacheDuration' => 3600,
+                    'cacheDependency' => new FileDependency(['fileName' => 'RefreshTokenRepositoryInterface.txt']),
+                ],
+            ],
+            'enableGrantTypes' => function (Module &$module) {
+                $server = $module->authorizationServer;
+                $server->enableGrantType(new ImplicitGrant(
+                    new DateInterval('PT1H')
+                ));
+                $server->enableGrantType(new PasswordGrant(
+                    $module->userRepository,
+                    $module->refreshTokenRepository
+                ));
+                $server->enableGrantType(new ClientCredentialsGrant());
+                $server->enableGrantType(new RefreshTokenGrant(
+                    $module->refreshTokenRepository
+                ));
+                $server->enableGrantType(new RevokeGrant(
+                    $module->refreshTokenRepository,
+                    $module->publicKey
+                ));
+            },
+        ],
         'user' => [
             'class' => Da\User\Module::class,
             'enableTwoFactorAuthentication' => true,

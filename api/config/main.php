@@ -1,5 +1,7 @@
 <?php
 
+use api\components\identity\IdentityClass;
+use api\components\models\User;
 use chervand\yii2\oauth2\server\components\Grant\RevokeGrant;
 use chervand\yii2\oauth2\server\Module;
 use Da\User\Contracts\MailChangeStrategyInterface;
@@ -22,12 +24,13 @@ $params = array_merge(
 return [
     'id' => 'app-api',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log', 'oauth2'],
+    'bootstrap' => ['oauth2', 'log'],
     'modules' => [
         'oauth2' => [
             'class' => Module::class,
             'privateKey' => __DIR__ . '/../oauth2/private.key',
             'publicKey' => __DIR__ . '/../oauth2/public.key',
+            'encryptionKey' => 'MxwSDiVmGA5uDtOxQy9cGYmzOiMnggfM0cWwX1Q2vMA=',
             'cache' => [
                 AccessTokenRepositoryInterface::class => [
                     'cacheDuration' => 3600,
@@ -62,7 +65,10 @@ return [
             'enableTwoFactorAuthentication' => true,
             'maxPasswordAge' => 30,
             'emailChangeStrategy' => MailChangeStrategyInterface::TYPE_SECURE,
-            'administratorPermissionName' => 'admin'
+            'administratorPermissionName' => 'admin',
+            'classMap' => [
+                'User' => User::class,
+            ],
         ],
         'v1' => [
             'basePath' => '@api/modules/v1',
@@ -70,6 +76,10 @@ return [
         ]
     ],
     'components' => [
+        'user' => [
+            'identityClass' => IdentityClass::class,
+            // ...
+        ],
         'request' => [
             'parsers' => [
                 'application/json' => yii\web\JsonParser::class,
@@ -88,7 +98,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-backend',
+            'name' => 'advanced-api',
         ],
         'log' => [
             'targets' => [

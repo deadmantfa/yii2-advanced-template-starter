@@ -1,30 +1,30 @@
 {
-  "_readme": [
-    "This file locks the dependencies of your project to a known state",
-    "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-    "This file is @generated automatically"
-  ],
-  "content-hash": "c0826a45397e5da5b86f12036e6966f5",
-  "packages": [
-    {
-      "name": "2amigos/2fa-library",
-      "version": "1.0.3",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/2amigos/2fa-library.git",
-        "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/2amigos/2fa-library/zipball/d74e8cd99021d5b994a2690a82298627a1017305",
-        "reference": "d74e8cd99021d5b994a2690a82298627a1017305",
-        "shasum": ""
-      },
-      "require": {
-        "paragonie/constant_time_encoding": "^1.0|^2.0",
-        "paragonie/random_compat": "^1.4|^2.0",
-        "php": ">=5.6"
-      },
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "dc5ea0a36bfea7c0eeddaa32a4eace7c",
+    "packages": [
+        {
+            "name": "2amigos/2fa-library",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/2fa-library.git",
+                "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/2fa-library/zipball/d74e8cd99021d5b994a2690a82298627a1017305",
+                "reference": "d74e8cd99021d5b994a2690a82298627a1017305",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/constant_time_encoding": "^1.0|^2.0",
+                "paragonie/random_compat": "^1.4|^2.0",
+                "php": ">=5.6"
+            },
             "require-dev": {
                 "2amigos/qrcode-library": "^1.1",
                 "friendsofphp/php-cs-fixer": "^2.3",
@@ -532,14 +532,14 @@
             ],
             "description": "A super fast, highly extensible markdown parser for PHP",
             "homepage": "https://github.com/cebe/markdown#readme",
-          "keywords": [
-            "extensible",
-            "fast",
-            "gfm",
-            "markdown",
-            "markdown-extra"
-          ],
-          "time": "2018-03-26T11:24:36+00:00"
+            "keywords": [
+                "extensible",
+                "fast",
+                "gfm",
+                "markdown",
+                "markdown-extra"
+            ],
+            "time": "2018-03-26T11:24:36+00:00"
         },
     {
       "name": "chervand/yii2-oauth2-server",
@@ -605,38 +605,38 @@
       "time": "2019-05-22T09:57:24+00:00"
     },
     {
-      "name": "creocoder/yii2-nested-sets",
-      "version": "0.9.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/creocoder/yii2-nested-sets.git",
-        "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
-                "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "creocoder\\nestedsets\\": "src"
-                }
-            },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "BSD-3-Clause"
-      ],
-      "authors": [
-        {
-          "name": "Alexander Kochetov",
-          "email": "creocoder@gmail.com"
-        }
-      ],
+        "name": "creocoder/yii2-nested-sets",
+        "version": "0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/creocoder/yii2-nested-sets.git",
+            "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
+            "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "type": "yii2-extension",
+        "autoload": {
+            "psr-4": {
+                "creocoder\\nestedsets\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Kochetov",
+                "email": "creocoder@gmail.com"
+            }
+        ],
       "description": "The nested sets behavior for the Yii framework",
       "keywords": [
         "nested sets",
@@ -718,56 +718,56 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-        "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-        "shasum": ""
+          "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+          "shasum": ""
       },
-      "require": {
-        "php": "^7.2"
-      },
-      "require-dev": {
-        "doctrine/coding-standard": "^6.0",
-        "phpstan/phpstan": "^0.11.8",
-        "phpunit/phpunit": "^8.2"
+        "require": {
+            "php": "^7.2"
+        },
+        "require-dev": {
+            "doctrine/coding-standard": "^6.0",
+            "phpstan/phpstan": "^0.11.8",
+            "phpunit/phpunit": "^8.2"
+        },
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.2.x-dev"
+            }
+        },
+        "autoload": {
+            "psr-4": {
+                "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Guilherme Blanco",
+                "email": "guilhermeblanco@gmail.com"
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
+            {
+                "name": "Roman Borschel",
+                "email": "roman@code-factory.org"
             },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-      "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-      "keywords": [
-        "annotations",
-        "docblock",
-        "lexer",
-        "parser",
-        "php"
-      ],
-      "time": "2019-10-30T14:39:59+00:00"
+            {
+                "name": "Johannes Schmitt",
+                "email": "schmittjoh@gmail.com"
+            }
+        ],
+        "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+        "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+        "keywords": [
+            "annotations",
+            "docblock",
+            "lexer",
+            "parser",
+            "php"
+        ],
+        "time": "2019-10-30T14:39:59+00:00"
     },
     {
       "name": "egulias/email-validator",
@@ -783,36 +783,36 @@
         "reference": "ade6887fd9bd74177769645ab5c474824f8a418a",
         "shasum": ""
       },
-      "require": {
-        "doctrine/lexer": "^1.0.1",
-        "php": ">=5.5",
-        "symfony/polyfill-intl-idn": "^1.10"
-      },
-      "require-dev": {
-        "dominicsayers/isemail": "^3.0.7",
-        "phpunit/phpunit": "^4.8.36|^7.5.15",
-        "satooshi/php-coveralls": "^1.0.1"
-      },
-            "suggest": {
-                "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Egulias\\EmailValidator\\": "EmailValidator"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
+        "require": {
+            "doctrine/lexer": "^1.0.1",
+            "php": ">=5.5",
+            "symfony/polyfill-intl-idn": "^1.10"
+        },
+        "require-dev": {
+            "dominicsayers/isemail": "^3.0.7",
+            "phpunit/phpunit": "^4.8.36|^7.5.15",
+            "satooshi/php-coveralls": "^1.0.1"
+        },
+        "suggest": {
+            "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+        },
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.1.x-dev"
+            }
+        },
+        "autoload": {
+            "psr-4": {
+                "Egulias\\EmailValidator\\": "EmailValidator"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
                     "name": "Eduardo Gulias Davis"
                 }
             ],
@@ -922,12 +922,12 @@
                     "homepage": "http://ezyang.com"
                 }
             ],
-          "description": "Standards compliant HTML filter written in PHP",
-          "homepage": "http://htmlpurifier.org/",
-          "keywords": [
-            "html"
-          ],
-          "time": "2019-10-28T03:44:26+00:00"
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2019-10-28T03:44:26+00:00"
         },
     {
       "name": "guzzlehttp/guzzle",
@@ -1119,36 +1119,36 @@
       "time": "2019-07-01T23:21:34+00:00"
     },
     {
-      "name": "guzzlehttp/ringphp",
-      "version": "1.1.1",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/guzzle/RingPHP.git",
-        "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/5e2a174052995663dd68e6b5ad838afd47dd615b",
-                "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/streams": "~3.0",
-                "php": ">=5.4.0",
-                "react/promise": "~2.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Guzzle will use specific adapters if cURL is present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
+        "name": "guzzlehttp/ringphp",
+        "version": "1.1.1",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/RingPHP.git",
+            "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/5e2a174052995663dd68e6b5ad838afd47dd615b",
+            "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/streams": "~3.0",
+            "php": ">=5.4.0",
+            "react/promise": "~2.0"
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "phpunit/phpunit": "~4.0"
+        },
+        "suggest": {
+            "ext-curl": "Guzzle will use specific adapters if cURL is present"
+        },
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
             },
             "autoload": {
                 "psr-4": {
@@ -1220,6 +1220,52 @@
             ],
             "abandoned": true,
             "time": "2014-10-12T19:18:40+00:00"
+        },
+        {
+            "name": "immusen/yii2-swoole-websocket",
+            "version": "v1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/immusen/yii2-swoole-websocket.git",
+                "reference": "223e65fbfef04a78d42924bc3822775616afac3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/immusen/yii2-swoole-websocket/zipball/223e65fbfef04a78d42924bc3822775616afac3c",
+                "reference": "223e65fbfef04a78d42924bc3822775616afac3c",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "immusen\\websocket\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "immusen",
+                    "email": "immusen@gmail.com"
+                }
+            ],
+            "description": "Websocket server for Yii2 base on swoole 4, Support JSONRPC, Resolve 'method' as a route reflect into controller/action, And support http or redis pub/sub to trigger async task from your web application.",
+            "keywords": [
+                "async",
+                "extension",
+                "pub sub",
+                "redis",
+                "swoole",
+                "websocket",
+                "websocket server",
+                "yii2"
+            ],
+            "time": "2019-03-31T08:29:21+00:00"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -3054,18 +3100,18 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-              "MIT"
+                "MIT"
             ],
-          "authors": [
-            {
-              "name": "Ashot Khanamiryan",
-              "email": "a.khanamiryan@gmail.com",
-              "homepage": "https://github.com/khanamiryan",
-              "role": "Developer"
-            }
-          ],
-          "description": "QR code decoder / reader",
-          "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
+            "authors": [
+                {
+                    "name": "Ashot Khanamiryan",
+                    "email": "a.khanamiryan@gmail.com",
+                    "homepage": "https://github.com/khanamiryan",
+                    "role": "Developer"
+                }
+            ],
+            "description": "QR code decoder / reader",
+            "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
           "keywords": [
             "barcode",
             "qr",
@@ -3257,27 +3303,27 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/Mirocow/yii2-elasticsearch/zipball/e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
-        "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
-        "shasum": ""
+          "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
+          "shasum": ""
       },
-      "require": {
-        "elasticsearch/elasticsearch": "^5.0",
-        "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0"
-      },
-      "type": "yii2-extension",
-      "autoload": {
-                "psr-4": {
-                    "mirocow\\elasticsearch\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Yii2 Elasticsearch client based on official Elasticsearch PHP library",
-            "time": "2019-10-20T00:54:07+00:00"
+        "require": {
+            "elasticsearch/elasticsearch": "^5.0",
+            "php": ">=5.4.0",
+            "yiisoft/yii2": ">=2.0"
         },
+        "type": "yii2-extension",
+        "autoload": {
+            "psr-4": {
+                "mirocow\\elasticsearch\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Yii2 Elasticsearch client based on official Elasticsearch PHP library",
+        "time": "2019-10-20T00:54:07+00:00"
+    },
         {
             "name": "mirocow/yii2-elasticsearch-debug",
             "version": "v0.0.5",
@@ -3708,6 +3754,18 @@
             "time": "2020-01-17T21:11:47+00:00"
         },
         {
+            "name": "npm-asset/bootstrap",
+            "version": "4.4.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "opis/closure",
             "version": "3.5.1",
             "source": {
@@ -4003,41 +4061,41 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-        "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
-        "shasum": ""
+          "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+          "shasum": ""
       },
-      "require": {
-        "php": ">=5.3.0"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-      "description": "Common interface for logging libraries",
-      "homepage": "https://github.com/php-fig/log",
-      "keywords": [
-        "log",
-        "psr",
-        "psr-3"
-      ],
-      "time": "2019-11-01T11:05:21+00:00"
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ],
+        "time": "2019-11-01T11:05:21+00:00"
     },
     {
       "name": "ralouphie/getallheaders",
@@ -4080,36 +4138,36 @@
       "time": "2019-03-08T08:55:37+00:00"
     },
     {
-      "name": "react/promise",
-      "version": "v2.7.1",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/reactphp/promise.git",
-        "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-                "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-                "shasum": ""
+        "name": "react/promise",
+        "version": "v2.7.1",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/reactphp/promise.git",
+            "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+            "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8"
+        },
+        "type": "library",
+        "autoload": {
+            "psr-4": {
+                "React\\Promise\\": "src/"
             },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
                 "MIT"
             ],
             "authors": [
@@ -4735,6 +4793,75 @@
                 "yii2"
             ],
             "time": "2019-04-23T13:18:43+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-bootstrap4",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-bootstrap4.git",
+                "reference": "c67ae3f3624c35d977841f6b18d0d752ebed6420"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap4/zipball/c67ae3f3624c35d977841f6b18d0d752ebed6420",
+                "reference": "c67ae3f3624c35d977841f6b18d0d752ebed6420",
+                "shasum": ""
+            },
+            "require": {
+                "npm-asset/bootstrap": "^4.3",
+                "yiisoft/yii2": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<7",
+                "yiisoft/yii2-coding-standards": "~2.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\bootstrap4\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/"
+                },
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com"
+                },
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                },
+                {
+                    "name": "Simon Karlen",
+                    "email": "simi.albi@outlook.com"
+                }
+            ],
+            "description": "The Twitter Bootstrap extension for the Yii framework",
+            "keywords": [
+                "bootstrap",
+                "bootstrap4",
+                "yii2"
+            ],
+            "time": "2019-10-08T11:01:37+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -7366,15 +7493,15 @@
             "license": [
                 "BSD-3-Clause"
             ],
-          "authors": [
-            {
-              "name": "Arne Blankerts",
-              "email": "arne@blankerts.de",
-              "role": "Developer"
-            }
-          ],
-          "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-          "time": "2019-06-13T22:48:21+00:00"
+            "authors": [
+                {
+                    "name": "Arne Blankerts",
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
+            "time": "2019-06-13T22:48:21+00:00"
         },
       {
         "name": "webmozart/assert",
@@ -7390,36 +7517,36 @@
           "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
           "shasum": ""
         },
-        "require": {
-          "php": "^5.3.3 || ^7.0",
-          "symfony/polyfill-ctype": "^1.8"
-        },
-        "conflict": {
-          "vimeo/psalm": "<3.6.0"
-        },
-        "require-dev": {
-          "phpunit/phpunit": "^4.8.36 || ^7.5.13"
-        },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Assert\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-                "check",
+          "require": {
+              "php": "^5.3.3 || ^7.0",
+              "symfony/polyfill-ctype": "^1.8"
+          },
+          "conflict": {
+              "vimeo/psalm": "<3.6.0"
+          },
+          "require-dev": {
+              "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+          },
+          "type": "library",
+          "autoload": {
+              "psr-4": {
+                  "Webmozart\\Assert\\": "src/"
+              }
+          },
+          "notification-url": "https://packagist.org/downloads/",
+          "license": [
+              "MIT"
+          ],
+          "authors": [
+              {
+                  "name": "Bernhard Schussek",
+                  "email": "bschussek@gmail.com"
+              }
+          ],
+          "description": "Assertions to validate method input/output with nice error messages.",
+          "keywords": [
+              "assert",
+              "check",
                 "validate"
             ],
         "time": "2020-02-14T12:15:55+00:00"

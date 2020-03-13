@@ -4,8 +4,10 @@ namespace api\components\identity;
 
 use api\components\models\User;
 use chervand\yii2\oauth2\server\models\AccessToken;
+use Da\User\Helper\SecurityHelper;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\UserRepositoryInterface;
+use yii\base\Security;
 use yii\web\IdentityInterface;
 
 /**
@@ -32,8 +34,11 @@ class IdentityClass extends AccessToken implements UserRepositoryInterface, Iden
     {
         // TODO: Implement getUserEntityByUserCredentials() method.
         $user = User::findOne(['username' => $username]);
-        return $user;
-        if ($this->securityHelper->validatePassword($password, $user->password_hash)) {
+        if ($user === null) {
+            return null;
+        }
+        $securityHelper = new SecurityHelper(new Security());
+        if ($securityHelper->validatePassword($password, $user->password_hash)) {
             return $user;
         }
 

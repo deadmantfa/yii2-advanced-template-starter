@@ -70,7 +70,7 @@ openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/v
 echo "Done!"
 
 info "Install additional software"
-apt-get install -y php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug php7.2-dev
+apt-get install -y php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug php7.2-dev php7.2-bcmath
 pecl update-channels
 pecl install swoole --enable-sockets --enable-openssl --enable-http2 --enable-mysqlnd
 cat << EOF > /etc/php/7.2/mods-available/swoole.ini

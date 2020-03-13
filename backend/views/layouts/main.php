@@ -5,6 +5,7 @@
 /* @var $content string */
 
 use backend\assets\AppAsset;
+use bedezign\yii2\audit\web\JSLoggingAsset;
 use common\widgets\Alert;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
@@ -13,6 +14,7 @@ use yii\web\View;
 use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
+JSLoggingAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-expand-md navbar-light bg-dark',
         ],
     ]);
     $menuItems = [

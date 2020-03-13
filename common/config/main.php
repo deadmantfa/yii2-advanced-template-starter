@@ -1,4 +1,8 @@
 <?php
+
+use bedezign\yii2\audit\Audit;
+use common\models\User;
+
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -6,9 +10,13 @@ return [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'modules' => [
-        'rbac' => [
-            'class' => 'yii2mod\rbac\Module',
-        ],
+        'audit' => [
+            'class' => Audit::class,
+            'accessRoles' => ['admin'],
+            'compressData' => true,
+            'userIdentifierCallback' => [User::class, 'userIdentifierCallback'],
+            'userFilterCallback' => [User::class, 'filterByUserIdentifierCallback'],
+        ]
     ],
     'container' => [
         'definitions' => [

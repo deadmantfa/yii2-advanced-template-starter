@@ -1,4 +1,11 @@
 <?php
+
+use bedezign\yii2\audit\components\console\ErrorHandler;
+use kartik\tree\Module;
+use mirocow\elasticsearch\log\ElasticsearchTarget;
+use yii\console\controllers\FixtureController;
+use yii\console\controllers\MigrateController;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -16,42 +23,57 @@ return [
         '@npm' => '@vendor/npm-asset',
     ],
     'modules' => [
-        'user' => Da\User\Module::class,
+        'user' => [
+            'class' => Da\User\Module::class,
+        ],
         'gridview' => [
-            'class' => '\kartik\grid\Module',
+            'class' => \kartik\grid\Module::class,
             // see settings on http://demos.krajee.com/grid#module
         ],
         'datecontrol' => [
-            'class' => '\kartik\datecontrol\Module',
+            'class' => \kartik\datecontrol\Module::class,
             // see settings on http://demos.krajee.com/datecontrol#module
         ],
         // If you use tree table
         'treemanager' => [
-            'class' => '\kartik\tree\Module',
+            'class' => Module::class,
             // see settings on http://demos.krajee.com/tree-manager#module
-        ]
+        ],
     ],
     'controllerMap' => [
         'fixture' => [
-            'class' => 'yii\console\controllers\FixtureController',
+            'class' => FixtureController::class,
             'namespace' => 'common\fixtures',
         ],
         'migrate' => [
-            'class' => \yii\console\controllers\MigrateController::class,
+            'class' => MigrateController::class,
             'migrationPath' => [
                 '@app/migrations',
                 '@yii/rbac/migrations', // Just in case you forgot to run it on console (see next note)
             ],
             'migrationNamespaces' => [
                 'Da\User\Migration',
+                'bedezign\yii2\audit\migrations',
             ],
         ],
     ],
     'components' => [
+        'errorHandler' => [
+            // console error handler
+            'class' => ErrorHandler::class,
+        ],
+
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'baseUrl' => 'https://front.fd.test/',
+            'rules' => [
+            ],
+        ],
         'log' => [
             'targets' => [
                 [
-                    'class' => 'mirocow\elasticsearch\log\ElasticsearchTarget',
+                    'class' => ElasticsearchTarget::class,
                     'levels' => ['error', 'warning'],
                     'index' => 'yii-log',
                     'type' => 'console',

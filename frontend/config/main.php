@@ -1,6 +1,7 @@
 <?php
 
 use Da\User\Contracts\MailChangeStrategyInterface;
+use mirocow\elasticsearch\log\ElasticsearchTarget;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -37,7 +38,7 @@ return [
         'log' => [
             'targets' => [
                 [
-                    'class' => 'mirocow\elasticsearch\log\ElasticsearchTarget',
+                    'class' => ElasticsearchTarget::class,
                     'levels' => ['error', 'warning'],
                     'index' => 'yii-log',
                     'type' => 'frontend',
@@ -45,6 +46,7 @@ return [
             ],
         ],
         'errorHandler' => [
+            'class' => ErrorHandler::class,
             'errorAction' => 'site/error',
         ],
         'urlManager' => [

@@ -1,20 +1,20 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "dc5ea0a36bfea7c0eeddaa32a4eace7c",
-    "packages": [
-        {
-            "name": "2amigos/2fa-library",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/2fa-library.git",
-                "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
-            },
-            "dist": {
+  "_readme": [
+    "This file locks the dependencies of your project to a known state",
+    "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+    "This file is @generated automatically"
+  ],
+  "content-hash": "0d0e28926bd19ba8d58212f7c391b4a5",
+  "packages": [
+    {
+      "name": "2amigos/2fa-library",
+      "version": "1.0.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/2amigos/2fa-library.git",
+        "reference": "d74e8cd99021d5b994a2690a82298627a1017305"
+      },
+      "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/2amigos/2fa-library/zipball/d74e8cd99021d5b994a2690a82298627a1017305",
                 "reference": "d74e8cd99021d5b994a2690a82298627a1017305",
@@ -131,26 +131,84 @@
             "keywords": [
                 "2amigos",
                 "component",
-                "extension",
-                "qr",
-                "qrcode",
-                "yii",
-                "yii 2",
-                "yii2"
+              "extension",
+              "qr",
+              "qrcode",
+              "yii",
+              "yii 2",
+              "yii2"
             ],
-            "time": "2017-08-25T15:23:58+00:00"
+          "time": "2017-08-25T15:23:58+00:00"
         },
+    {
+      "name": "2amigos/yii2-chartjs-widget",
+      "version": "2.1.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/2amigos/yii2-chartjs-widget.git",
+        "reference": "b144a4ebd923872a7263c980f8afe2e212378275"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/2amigos/yii2-chartjs-widget/zipball/b144a4ebd923872a7263c980f8afe2e212378275",
+        "reference": "b144a4ebd923872a7263c980f8afe2e212378275",
+        "shasum": ""
+      },
+      "require": {
+        "bower-asset/chartjs": "~2.6",
+        "yiisoft/yii2": "~2.0.5"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "~4.4"
+      },
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "dosamigos\\chartjs\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-            "name": "2amigos/yii2-selectize-widget",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-selectize-widget.git",
-                "reference": "9762a34d1095f15b60f46b876dad245011755bfc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-selectize-widget/zipball/9762a34d1095f15b60f46b876dad245011755bfc",
+          "name": "2amigOS! Consulting Group",
+          "email": "hola@2amigos.us",
+          "homepage": "http://2amigos.us",
+          "role": "Developer"
+        }
+      ],
+      "description": "ChartJs widget for Yii2.",
+      "homepage": "http://yiiwheels.com/extension/chartjs-widget",
+      "keywords": [
+        "2amigos",
+        "chartjs",
+        "extension",
+        "widget",
+        "yii",
+        "yii 2",
+        "yii2"
+      ],
+      "time": "2018-05-02T17:59:16+00:00"
+    },
+    {
+      "name": "2amigos/yii2-selectize-widget",
+      "version": "1.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/2amigos/yii2-selectize-widget.git",
+        "reference": "9762a34d1095f15b60f46b876dad245011755bfc"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/2amigos/yii2-selectize-widget/zipball/9762a34d1095f15b60f46b876dad245011755bfc",
                 "reference": "9762a34d1095f15b60f46b876dad245011755bfc",
                 "shasum": ""
             },
@@ -317,47 +375,129 @@
             "authors": [
                 {
                     "name": "Ben Scholzen 'DASPRiD'",
-                    "email": "mail@dasprids.de",
-                    "homepage": "http://www.dasprids.de",
-                    "role": "Developer"
+                  "email": "mail@dasprids.de",
+                  "homepage": "http://www.dasprids.de",
+                  "role": "Developer"
                 }
             ],
-            "description": "BaconQrCode is a QR code generator for PHP.",
-            "homepage": "https://github.com/Bacon/BaconQrCode",
-            "time": "2017-10-17T09:59:25+00:00"
+          "description": "BaconQrCode is a QR code generator for PHP.",
+          "homepage": "https://github.com/Bacon/BaconQrCode",
+          "time": "2017-10-17T09:59:25+00:00"
+        },
+    {
+      "name": "bedezign/yii2-audit",
+      "version": "1.1.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/bedezign/yii2-audit.git",
+        "reference": "f198052cc98d1daadfb7600d7b816a2208d73eca"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/bedezign/yii2-audit/zipball/f198052cc98d1daadfb7600d7b816a2208d73eca",
+        "reference": "f198052cc98d1daadfb7600d7b816a2208d73eca",
+        "shasum": ""
+      },
+      "require": {
+        "2amigos/yii2-chartjs-widget": ">=2.0.1 <3.0.0",
+        "ext-bcmath": "*",
+        "php": ">=7.2.0",
+        "phpspec/php-diff": "1.*",
+        "yiisoft/yii2": ">=2.0.0 <2.1.0",
+        "yiisoft/yii2-debug": ">=2.1.0 <2.2.0"
+      },
+      "suggest": {
+        "php-mime-mail-parser/php-mime-mail-parser": "Allows better displaying of logged emails."
+      },
+      "type": "yii2-extension",
+      "extra": {
+        "bootstrap": "bedezign\\yii2\\audit\\Bootstrap"
+      },
+      "autoload": {
+        "psr-4": {
+          "bedezign\\yii2\\audit\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Steve Guns",
+          "email": "Steve@bedezign.com",
+          "homepage": "http://bedezign.com/"
         },
         {
-            "name": "bower-asset/bootstrap",
-            "version": "v3.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/68b0d231a13201eb14acd3dc84e51543d16e5f7e",
-                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.9.1,<4.0"
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
+          "name": "Brett O'Donnell",
+          "email": "cornernote@gmail.com",
+          "homepage": "https://mrphp.com.au/"
         },
         {
-            "name": "bower-asset/inputmask",
-            "version": "3.3.11",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
-                "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5e670ad62f50c738388d4dcec78d2888505ad77b",
+          "name": "Marc Hollander",
+          "email": "marchollander@gmail.com",
+          "homepage": "http://maruc.nl/"
+        }
+      ],
+      "description": "Yii2 Audit records and displays web/cli requests, database changes, php/js errors and associated data.",
+      "keywords": [
+        "Audit",
+        "logging",
+        "trail",
+        "yii2"
+      ],
+      "time": "2019-11-01T21:21:20+00:00"
+    },
+    {
+      "name": "bower-asset/bootstrap",
+      "version": "v3.4.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/twbs/bootstrap.git",
+        "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/twbs/bootstrap/zipball/68b0d231a13201eb14acd3dc84e51543d16e5f7e",
+                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
+      },
+      "require": {
+        "bower-asset/jquery": ">=1.9.1,<4.0"
+      },
+      "type": "bower-asset",
+      "license": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "bower-asset/chartjs",
+      "version": "v2.9.3",
+      "source": {
+        "type": "git",
+        "url": "git@github.com:nnnick/Chart.js.git",
+        "reference": "06f73dc3590084b2c464bf08189c7aee2b6b92d2"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/nnnick/Chart.js/zipball/06f73dc3590084b2c464bf08189c7aee2b6b92d2",
+        "reference": "06f73dc3590084b2c464bf08189c7aee2b6b92d2"
+      },
+      "type": "bower-asset",
+      "license": [
+        "MIT"
+      ]
+    },
+    {
+      "name": "bower-asset/inputmask",
+      "version": "3.3.11",
+      "source": {
+        "type": "git",
+        "url": "git@github.com:RobinHerbots/Inputmask.git",
+        "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5e670ad62f50c738388d4dcec78d2888505ad77b",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "require": {
@@ -531,15 +671,15 @@
                 }
             ],
             "description": "A super fast, highly extensible markdown parser for PHP",
-            "homepage": "https://github.com/cebe/markdown#readme",
-            "keywords": [
-                "extensible",
-                "fast",
-                "gfm",
-                "markdown",
-                "markdown-extra"
-            ],
-            "time": "2018-03-26T11:24:36+00:00"
+          "homepage": "https://github.com/cebe/markdown#readme",
+          "keywords": [
+            "extensible",
+            "fast",
+            "gfm",
+            "markdown",
+            "markdown-extra"
+          ],
+          "time": "2018-03-26T11:24:36+00:00"
         },
     {
       "name": "chervand/yii2-oauth2-server",
@@ -605,38 +745,38 @@
       "time": "2019-05-22T09:57:24+00:00"
     },
     {
-        "name": "creocoder/yii2-nested-sets",
-        "version": "0.9.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/creocoder/yii2-nested-sets.git",
-            "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
-            "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": "*"
-        },
-        "type": "yii2-extension",
-        "autoload": {
-            "psr-4": {
-                "creocoder\\nestedsets\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Alexander Kochetov",
-                "email": "creocoder@gmail.com"
-            }
-        ],
+      "name": "creocoder/yii2-nested-sets",
+      "version": "0.9.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/creocoder/yii2-nested-sets.git",
+        "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/creocoder/yii2-nested-sets/zipball/cb8635a459b6246e5a144f096b992dcc30cf9954",
+        "reference": "cb8635a459b6246e5a144f096b992dcc30cf9954",
+        "shasum": ""
+      },
+      "require": {
+        "yiisoft/yii2": "*"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "creocoder\\nestedsets\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
+        {
+          "name": "Alexander Kochetov",
+          "email": "creocoder@gmail.com"
+        }
+      ],
       "description": "The nested sets behavior for the Yii framework",
       "keywords": [
         "nested sets",
@@ -718,56 +858,56 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-          "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
-          "shasum": ""
+        "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+        "shasum": ""
       },
-        "require": {
-            "php": "^7.2"
+      "require": {
+        "php": "^7.2"
+      },
+      "require-dev": {
+        "doctrine/coding-standard": "^6.0",
+        "phpstan/phpstan": "^0.11.8",
+        "phpunit/phpunit": "^8.2"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.2.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Guilherme Blanco",
+          "email": "guilhermeblanco@gmail.com"
         },
-        "require-dev": {
-            "doctrine/coding-standard": "^6.0",
-            "phpstan/phpstan": "^0.11.8",
-            "phpunit/phpunit": "^8.2"
+        {
+          "name": "Roman Borschel",
+          "email": "roman@code-factory.org"
         },
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.2.x-dev"
-            }
-        },
-        "autoload": {
-            "psr-4": {
-                "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
-            },
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Johannes Schmitt",
-                "email": "schmittjoh@gmail.com"
-            }
-        ],
-        "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-        "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-        "keywords": [
-            "annotations",
-            "docblock",
-            "lexer",
-            "parser",
-            "php"
-        ],
-        "time": "2019-10-30T14:39:59+00:00"
+        {
+          "name": "Johannes Schmitt",
+          "email": "schmittjoh@gmail.com"
+        }
+      ],
+      "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+      "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+      "keywords": [
+        "annotations",
+        "docblock",
+        "lexer",
+        "parser",
+        "php"
+      ],
+      "time": "2019-10-30T14:39:59+00:00"
     },
     {
       "name": "egulias/email-validator",
@@ -783,46 +923,46 @@
         "reference": "ade6887fd9bd74177769645ab5c474824f8a418a",
         "shasum": ""
       },
-        "require": {
-            "doctrine/lexer": "^1.0.1",
-            "php": ">=5.5",
-            "symfony/polyfill-intl-idn": "^1.10"
-        },
-        "require-dev": {
-            "dominicsayers/isemail": "^3.0.7",
-            "phpunit/phpunit": "^4.8.36|^7.5.15",
-            "satooshi/php-coveralls": "^1.0.1"
-        },
-        "suggest": {
-            "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
-        },
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.1.x-dev"
-            }
-        },
-        "autoload": {
-            "psr-4": {
-                "Egulias\\EmailValidator\\": "EmailValidator"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                    "name": "Eduardo Gulias Davis"
-                }
-            ],
-            "description": "A library for validating emails against several RFCs",
-            "homepage": "https://github.com/egulias/EmailValidator",
-            "keywords": [
-                "email",
-                "emailvalidation",
-                "emailvalidator",
-                "validation",
+      "require": {
+        "doctrine/lexer": "^1.0.1",
+        "php": ">=5.5",
+        "symfony/polyfill-intl-idn": "^1.10"
+      },
+      "require-dev": {
+        "dominicsayers/isemail": "^3.0.7",
+        "phpunit/phpunit": "^4.8.36|^7.5.15",
+        "satooshi/php-coveralls": "^1.0.1"
+      },
+      "suggest": {
+        "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.1.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Egulias\\EmailValidator\\": "EmailValidator"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Eduardo Gulias Davis"
+        }
+      ],
+      "description": "A library for validating emails against several RFCs",
+      "homepage": "https://github.com/egulias/EmailValidator",
+      "keywords": [
+        "email",
+        "emailvalidation",
+        "emailvalidator",
+        "validation",
                 "validator"
             ],
       "time": "2020-02-13T22:36:52+00:00"
@@ -919,15 +1059,15 @@
                 {
                     "name": "Edward Z. Yang",
                     "email": "admin@htmlpurifier.org",
-                    "homepage": "http://ezyang.com"
+                  "homepage": "http://ezyang.com"
                 }
             ],
-            "description": "Standards compliant HTML filter written in PHP",
-            "homepage": "http://htmlpurifier.org/",
-            "keywords": [
-                "html"
-            ],
-            "time": "2019-10-28T03:44:26+00:00"
+          "description": "Standards compliant HTML filter written in PHP",
+          "homepage": "http://htmlpurifier.org/",
+          "keywords": [
+            "html"
+          ],
+          "time": "2019-10-28T03:44:26+00:00"
         },
     {
       "name": "guzzlehttp/guzzle",
@@ -1119,46 +1259,46 @@
       "time": "2019-07-01T23:21:34+00:00"
     },
     {
-        "name": "guzzlehttp/ringphp",
-        "version": "1.1.1",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/RingPHP.git",
-            "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/5e2a174052995663dd68e6b5ad838afd47dd615b",
-            "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b",
-            "shasum": ""
-        },
-        "require": {
-            "guzzlehttp/streams": "~3.0",
-            "php": ">=5.4.0",
-            "react/promise": "~2.0"
-        },
-        "require-dev": {
-            "ext-curl": "*",
-            "phpunit/phpunit": "~4.0"
-        },
-        "suggest": {
-            "ext-curl": "Guzzle will use specific adapters if cURL is present"
-        },
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.1-dev"
-            }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Ring\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
+      "name": "guzzlehttp/ringphp",
+      "version": "1.1.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/guzzle/RingPHP.git",
+        "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/5e2a174052995663dd68e6b5ad838afd47dd615b",
+        "reference": "5e2a174052995663dd68e6b5ad838afd47dd615b",
+        "shasum": ""
+      },
+      "require": {
+        "guzzlehttp/streams": "~3.0",
+        "php": ">=5.4.0",
+        "react/promise": "~2.0"
+      },
+      "require-dev": {
+        "ext-curl": "*",
+        "phpunit/phpunit": "~4.0"
+      },
+      "suggest": {
+        "ext-curl": "Guzzle will use specific adapters if cURL is present"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.1-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "GuzzleHttp\\Ring\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
             "authors": [
                 {
                     "name": "Michael Dowling",
@@ -1446,26 +1586,75 @@
             ],
             "description": "A multi level dependent dropdown JQuery plugin that allows nested dependencies.",
             "homepage": "https://github.com/kartik-v/dependent-dropdown",
-            "keywords": [
-                "dependent",
-                "dropdown",
-                "jquery",
-                "option",
-                "select"
-            ],
-            "time": "2019-03-09T10:53:11+00:00"
+          "keywords": [
+            "dependent",
+            "dropdown",
+            "jquery",
+            "option",
+            "select"
+          ],
+          "time": "2019-03-09T10:53:11+00:00"
         },
+    {
+      "name": "kartik-v/php-date-formatter",
+      "version": "v1.3.5",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/php-date-formatter.git",
+        "reference": "d842e1c4e6a8d6108017b726321c305bb5ae4fb5"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/php-date-formatter/zipball/d842e1c4e6a8d6108017b726321c305bb5ae4fb5",
+        "reference": "d842e1c4e6a8d6108017b726321c305bb5ae4fb5",
+        "shasum": ""
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.3.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\plugins\\dateformatter\\": ""
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-            "name": "kartik-v/yii2-builder",
-            "version": "v1.6.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-builder.git",
-                "reference": "9639b36959094500b1bd519b39b581def5d98e17"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-builder/zipball/9639b36959094500b1bd519b39b581def5d98e17",
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "A Javascript datetime formatting and manipulation library using PHP date-time formats.",
+      "homepage": "https://github.com/kartik-v/php-date-formatter",
+      "keywords": [
+        "date",
+        "datetime",
+        "formatter",
+        "javascript",
+        "php",
+        "php-date-formatter.js",
+        "time"
+      ],
+      "time": "2018-07-13T06:56:46+00:00"
+    },
+    {
+      "name": "kartik-v/yii2-builder",
+      "version": "v1.6.7",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-builder.git",
+        "reference": "9639b36959094500b1bd519b39b581def5d98e17"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-builder/zipball/9639b36959094500b1bd519b39b581def5d98e17",
                 "reference": "9639b36959094500b1bd519b39b581def5d98e17",
                 "shasum": ""
             },
@@ -1498,26 +1687,78 @@
             ],
             "description": "Build forms (single-row or multi-row/tabular) easily for Yii Framework 2.0",
             "homepage": "https://github.com/kartik-v/yii2-builder",
-            "keywords": [
-                "builder",
-                "extension",
-                "form",
-                "widget",
-                "yii2"
-            ],
-            "time": "2019-06-18T13:41:07+00:00"
-        },
+      "keywords": [
+        "builder",
+        "extension",
+        "form",
+        "widget",
+        "yii2"
+      ],
+      "time": "2019-06-18T13:41:07+00:00"
+    },
+    {
+      "name": "kartik-v/yii2-datecontrol",
+      "version": "v1.9.7",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-datecontrol.git",
+        "reference": "e095702e8bcd325a09f6a6e6b21f0b529b6965b9"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-datecontrol/zipball/e095702e8bcd325a09f6a6e6b21f0b529b6965b9",
+        "reference": "e095702e8bcd325a09f6a6e6b21f0b529b6965b9",
+        "shasum": ""
+      },
+      "require": {
+        "kartik-v/php-date-formatter": ">1.3",
+        "kartik-v/yii2-krajee-base": ">=1.9"
+      },
+      "type": "yii2-extension",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.9.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "kartik\\datecontrol\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
         {
-            "name": "kartik-v/yii2-dialog",
-            "version": "v1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-dialog.git",
-                "reference": "c38616d719f52530749457c022ca6134d0ad31ce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-dialog/zipball/c38616d719f52530749457c022ca6134d0ad31ce",
+          "name": "Kartik Visweswaran",
+          "email": "kartikv2@gmail.com",
+          "homepage": "http://www.krajee.com/"
+        }
+      ],
+      "description": "Date control module allowing separation of formats for View and Model for Yii Framework 2.0",
+      "homepage": "https://github.com/kartik-v/yii2-datecontrol",
+      "keywords": [
+        "control",
+        "date",
+        "extension",
+        "format",
+        "yii",
+        "yii2"
+      ],
+      "time": "2018-09-23T07:29:23+00:00"
+    },
+    {
+      "name": "kartik-v/yii2-dialog",
+      "version": "v1.0.5",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/kartik-v/yii2-dialog.git",
+        "reference": "c38616d719f52530749457c022ca6134d0ad31ce"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/kartik-v/yii2-dialog/zipball/c38616d719f52530749457c022ca6134d0ad31ce",
                 "reference": "c38616d719f52530749457c022ca6134d0ad31ce",
                 "shasum": ""
             },
@@ -3102,16 +3343,16 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Ashot Khanamiryan",
-                    "email": "a.khanamiryan@gmail.com",
-                    "homepage": "https://github.com/khanamiryan",
-                    "role": "Developer"
-                }
-            ],
-            "description": "QR code decoder / reader",
-            "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
+          "authors": [
+            {
+              "name": "Ashot Khanamiryan",
+              "email": "a.khanamiryan@gmail.com",
+              "homepage": "https://github.com/khanamiryan",
+              "role": "Developer"
+            }
+          ],
+          "description": "QR code decoder / reader",
+          "homepage": "https://github.com/khanamiryan/php-qrcode-detector-decoder/",
           "keywords": [
             "barcode",
             "qr",
@@ -3303,37 +3544,37 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/Mirocow/yii2-elasticsearch/zipball/e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
-          "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
-          "shasum": ""
+        "reference": "e56e4997d05fa14895fdd3c70ccc2d664792e6ff",
+        "shasum": ""
       },
-        "require": {
-            "elasticsearch/elasticsearch": "^5.0",
-            "php": ">=5.4.0",
-            "yiisoft/yii2": ">=2.0"
-        },
-        "type": "yii2-extension",
-        "autoload": {
-            "psr-4": {
-                "mirocow\\elasticsearch\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "description": "Yii2 Elasticsearch client based on official Elasticsearch PHP library",
-        "time": "2019-10-20T00:54:07+00:00"
+      "require": {
+        "elasticsearch/elasticsearch": "^5.0",
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "mirocow\\elasticsearch\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "description": "Yii2 Elasticsearch client based on official Elasticsearch PHP library",
+      "time": "2019-10-20T00:54:07+00:00"
     },
-        {
-            "name": "mirocow/yii2-elasticsearch-debug",
-            "version": "v0.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Mirocow/yii2-elasticsearch-debug.git",
-                "reference": "970070f0d9ce0091cdd73d9ecb3e2424a89b6faf"
-            },
-            "dist": {
-                "type": "zip",
+    {
+      "name": "mirocow/yii2-elasticsearch-debug",
+      "version": "v0.0.5",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Mirocow/yii2-elasticsearch-debug.git",
+        "reference": "970070f0d9ce0091cdd73d9ecb3e2424a89b6faf"
+      },
+      "dist": {
+        "type": "zip",
                 "url": "https://api.github.com/repos/Mirocow/yii2-elasticsearch-debug/zipball/970070f0d9ce0091cdd73d9ecb3e2424a89b6faf",
                 "reference": "970070f0d9ce0091cdd73d9ecb3e2424a89b6faf",
                 "shasum": ""
@@ -3978,14 +4219,14 @@
                 {
                     "name": "Erik Tilt"
                 },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "http://rootslabs.net"
-                },
-                {
-                    "name": "Mark Baker",
-                    "homepage": "http://markbakeruk.net"
-                }
+              {
+                "name": "Franck Lefevre",
+                "homepage": "http://rootslabs.net"
+              },
+              {
+                "name": "Mark Baker",
+                "homepage": "http://markbakeruk.net"
+              }
             ],
           "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
           "homepage": "https://github.com/PHPOffice/PHPExcel",
@@ -4000,6 +4241,44 @@
           "abandoned": "phpoffice/phpspreadsheet",
           "time": "2018-11-22T23:07:24+00:00"
         },
+    {
+      "name": "phpspec/php-diff",
+      "version": "v1.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpspec/php-diff.git",
+        "reference": "0464787bfa7cd13576c5a1e318709768798bec6a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
+        "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
+        "shasum": ""
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-0": {
+          "Diff": "lib/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
+        {
+          "name": "Chris Boulton",
+          "homepage": "http://github.com/chrisboulton"
+        }
+      ],
+      "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
+      "time": "2016-04-07T12:29:16+00:00"
+    },
     {
       "name": "psr/http-message",
       "version": "1.0.1",
@@ -4061,41 +4340,41 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-          "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
-          "shasum": ""
+        "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+        "shasum": ""
       },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.1.x-dev"
-            }
-        },
-        "autoload": {
-            "psr-4": {
-                "Psr\\Log\\": "Psr/Log/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "PHP-FIG",
-                "homepage": "http://www.php-fig.org/"
-            }
-        ],
-        "description": "Common interface for logging libraries",
-        "homepage": "https://github.com/php-fig/log",
-        "keywords": [
-            "log",
-            "psr",
-            "psr-3"
-        ],
-        "time": "2019-11-01T11:05:21+00:00"
+      "require": {
+        "php": ">=5.3.0"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.1.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Log\\": "Psr/Log/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "PHP-FIG",
+          "homepage": "http://www.php-fig.org/"
+        }
+      ],
+      "description": "Common interface for logging libraries",
+      "homepage": "https://github.com/php-fig/log",
+      "keywords": [
+        "log",
+        "psr",
+        "psr-3"
+      ],
+      "time": "2019-11-01T11:05:21+00:00"
     },
     {
       "name": "ralouphie/getallheaders",
@@ -4138,46 +4417,46 @@
       "time": "2019-03-08T08:55:37+00:00"
     },
     {
-        "name": "react/promise",
-        "version": "v2.7.1",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/reactphp/promise.git",
-            "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
+      "name": "react/promise",
+      "version": "v2.7.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/reactphp/promise.git",
+        "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+        "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.4.0"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "~4.8"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "React\\Promise\\": "src/"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-            "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.8"
-        },
-        "type": "library",
-        "autoload": {
-            "psr-4": {
-                "React\\Promise\\": "src/"
-            },
-            "files": [
-                "src/functions_include.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
-                }
-            ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "keywords": [
+        "files": [
+          "src/functions_include.php"
+        ]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Jan Sorgalla",
+          "email": "jsorgalla@gmail.com"
+        }
+      ],
+      "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+      "keywords": [
                 "promise",
                 "promises"
             ],
@@ -5216,16 +5495,17 @@
                     "homepage": "http://codegyre.com"
                 }
             ],
-            "description": "BDD-style testing framework",
-            "homepage": "http://codeception.com/",
-            "keywords": [
-                "BDD",
-                "TDD",
-                "acceptance testing",
-                "functional testing",
-                "unit testing"
-            ],
-            "time": "2019-04-24T11:36:34+00:00"
+          "description": "BDD-style testing framework",
+          "homepage": "http://codeception.com/",
+          "keywords": [
+            "BDD",
+            "TDD",
+            "acceptance testing",
+            "functional testing",
+            "unit testing"
+          ],
+          "abandoned": true,
+          "time": "2019-04-24T11:36:34+00:00"
         },
         {
             "name": "codeception/phpunit-wrapper",
@@ -5703,44 +5983,6 @@
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "time": "2019-08-22T18:11:29+00:00"
-        },
-        {
-            "name": "phpspec/php-diff",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpspec/php-diff.git",
-                "reference": "0464787bfa7cd13576c5a1e318709768798bec6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
-                "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Diff": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Boulton",
-                    "homepage": "http://github.com/chrisboulton"
-                }
-            ],
-            "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
-            "time": "2016-04-07T12:29:16+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -7493,15 +7735,15 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "authors": [
-                {
-                    "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2019-06-13T22:48:21+00:00"
+          "authors": [
+            {
+              "name": "Arne Blankerts",
+              "email": "arne@blankerts.de",
+              "role": "Developer"
+            }
+          ],
+          "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
+          "time": "2019-06-13T22:48:21+00:00"
         },
       {
         "name": "webmozart/assert",
@@ -7517,46 +7759,46 @@
           "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
           "shasum": ""
         },
-          "require": {
-              "php": "^5.3.3 || ^7.0",
-              "symfony/polyfill-ctype": "^1.8"
-          },
-          "conflict": {
-              "vimeo/psalm": "<3.6.0"
-          },
-          "require-dev": {
-              "phpunit/phpunit": "^4.8.36 || ^7.5.13"
-          },
-          "type": "library",
-          "autoload": {
-              "psr-4": {
-                  "Webmozart\\Assert\\": "src/"
-              }
-          },
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-              "MIT"
-          ],
-          "authors": [
-              {
-                  "name": "Bernhard Schussek",
-                  "email": "bschussek@gmail.com"
-              }
-          ],
-          "description": "Assertions to validate method input/output with nice error messages.",
-          "keywords": [
-              "assert",
-              "check",
-                "validate"
-            ],
-        "time": "2020-02-14T12:15:55+00:00"
+        "require": {
+          "php": "^5.3.3 || ^7.0",
+          "symfony/polyfill-ctype": "^1.8"
         },
-        {
-            "name": "yiisoft/yii2-faker",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/yii2-faker.git",
+        "conflict": {
+          "vimeo/psalm": "<3.6.0"
+        },
+        "require-dev": {
+          "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+        },
+        "type": "library",
+        "autoload": {
+          "psr-4": {
+            "Webmozart\\Assert\\": "src/"
+          }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+          "MIT"
+        ],
+        "authors": [
+          {
+            "name": "Bernhard Schussek",
+            "email": "bschussek@gmail.com"
+          }
+        ],
+        "description": "Assertions to validate method input/output with nice error messages.",
+        "keywords": [
+          "assert",
+          "check",
+          "validate"
+        ],
+        "time": "2020-02-14T12:15:55+00:00"
+      },
+      {
+        "name": "yiisoft/yii2-faker",
+        "version": "2.0.4",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/yiisoft/yii2-faker.git",
                 "reference": "3df62b1dcb272a8413f9c6e532c9d73f325ccde1"
             },
             "dist": {

@@ -1,6 +1,8 @@
 <?php
 
+use bedezign\yii2\audit\components\web\ErrorHandler;
 use Da\User\Contracts\MailChangeStrategyInterface;
+use mirocow\elasticsearch\log\ElasticsearchTarget;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -20,7 +22,10 @@ return [
             'enableTwoFactorAuthentication' => true,
             'maxPasswordAge' => 30,
             'emailChangeStrategy' => MailChangeStrategyInterface::TYPE_SECURE,
-            'administratorPermissionName' => 'admin'
+            'administratorPermissionName' => 'admin',
+            'classMap' => [
+                'User' => common\models\User::class,
+            ],
         ],
     ],
     'components' => [
@@ -34,7 +39,7 @@ return [
         'log' => [
             'targets' => [
                 [
-                    'class' => 'mirocow\elasticsearch\log\ElasticsearchTarget',
+                    'class' => ElasticsearchTarget::class,
                     'levels' => ['error', 'warning'],
                     'index' => 'yii-log',
                     'type' => 'backend',
@@ -42,6 +47,7 @@ return [
             ],
         ],
         'errorHandler' => [
+            'class' => ErrorHandler::class,
             'errorAction' => 'site/error',
         ],
         'urlManager' => [

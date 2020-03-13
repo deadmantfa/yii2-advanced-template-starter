@@ -1,14 +1,15 @@
 <?php
 
-/* @var $this \yii\web\View */
+/* @var $this View */
 
 /* @var $content string */
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
+use yii\web\View;
 use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);

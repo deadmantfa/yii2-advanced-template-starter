@@ -16,8 +16,7 @@ trait CommonTrait
         $behaviors = parent::behaviors();
 
         // remove authentication filter
-        unset($behaviors['authenticator']);
-        unset($behaviors['rateLimiter']);
+        unset($behaviors['authenticator'], $behaviors['rateLimiter']);
         $auth = Yii::$app->getModule('oauth2');
 
         // re-add authentication filter

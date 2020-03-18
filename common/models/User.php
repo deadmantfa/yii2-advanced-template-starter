@@ -4,6 +4,7 @@ namespace common\models;
 
 use Da\User\Model\User as BaseUser;
 use DateTime;
+use yii\bootstrap4\Html;
 
 class User extends BaseUser
 {

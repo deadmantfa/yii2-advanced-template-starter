@@ -1,6 +1,6 @@
 <?php
 
-use backend\assets\AdminLteAssets;
+use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -27,14 +27,7 @@ if (in_array(Yii::$app->controller->action->id, $spl)) {
     );
 } else {
 
-//    if (class_exists('backend\assets\AppAsset')) {
-//        backend\assets\AppAsset::register($this);
-//    } else {
-//        app\assets\AppAsset::register($this);
-//    }
-
-    AdminLteAssets::register($this);
-    dmstr\adminlte\web\FontAwesomeAsset::register($this);
+    AppAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
     ?>

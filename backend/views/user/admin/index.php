@@ -9,6 +9,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
+use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
@@ -129,13 +130,13 @@ $module = Yii::$app->getModule('user');
                     'format' => 'raw',
                 ],
                 [
-                    'class' => 'yii\grid\ActionColumn',
+                    'class' => ActionColumn::class,
                     'template' => '{switch} {reset} {force-password-change} {update} {delete}',
                     'buttons' => [
-                        'switch' => function ($url, $model) use ($module) {
-                            if ($model->id != Yii::$app->user->id && $module->enableSwitchIdentities) {
+                        'switch' => static function ($url, $model) use ($module) {
+                            if ($model->id !== Yii::$app->user->id && $module->enableSwitchIdentities) {
                                 return Html::a(
-                                    '<span class="glyphicon glyphicon-user"></span>',
+                                    '<span class="fa fa-exchange-alt"></span>',
                                     ['/user/admin/switch-identity', 'id' => $model->id],
                                     [
                                         'title' => Yii::t('usuario', 'Impersonate this user'),
@@ -150,10 +151,10 @@ $module = Yii::$app->getModule('user');
 
                             return null;
                         },
-                        'reset' => function ($url, $model) use ($module) {
+                        'reset' => static function ($url, $model) use ($module) {
                             if ($module->allowAdminPasswordRecovery) {
                                 return Html::a(
-                                    '<span class="glyphicon glyphicon-flash"></span>',
+                                    '<span class="fa fa-redo"></span>',
                                     ['/user/admin/password-reset', 'id' => $model->id],
                                     [
                                         'title' => Yii::t('usuario', 'Send password recovery email'),
@@ -168,8 +169,8 @@ $module = Yii::$app->getModule('user');
 
                             return null;
                         },
-                        'force-password-change' => function ($url, $model) use ($module) {
-                            if (is_null($module->maxPasswordAge)) {
+                        'force-password-change' => static function ($url, $model) use ($module) {
+                            if ($module->maxPasswordAge === null) {
                                 return null;
                             }
                             return Html::a(

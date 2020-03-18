@@ -28,8 +28,9 @@ use yii\web\View;
                                 ['label' => 'User Management', 'iconType' => 'far', 'icon' => 'user', 'url' => ['/user/admin/index'],],
                                 ['label' => 'Debug', 'icon' => 'tachometer-alt', 'url' => ['/debug'],],
                                 ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/gii'],],
+                                ['label' => 'Audit Log', 'iconType' => 'fa', 'icon' => 'chalkboard', 'url' => ['/audit'],],
                             ],
-                            'visable' => Yii::$app->user->can('admin')
+                            'visible' => Yii::$app->user->can('admin')
                         ],
                     ],
                 ]

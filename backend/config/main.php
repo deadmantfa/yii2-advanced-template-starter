@@ -19,15 +19,21 @@ return [
     'modules' => [
         'user' => [
             'class' => Da\User\Module::class,
-            'enableTwoFactorAuthentication' => true,
             'maxPasswordAge' => 30,
             'emailChangeStrategy' => MailChangeStrategyInterface::TYPE_SECURE,
             'administrators' => ['deadmantfa'],
             'administratorPermissionName' => 'admin',
+            'enableTwoFactorAuthentication' => !YII_DEBUG,
+            'enableRegistration' => false,
+            'enableSwitchIdentities' => YII_DEBUG,
+            'allowAdminPasswordRecovery' => true,
             'classMap' => [
                 'User' => common\models\User::class,
             ],
         ],
+        'audit' => [
+            'layout' => '@backend/views/layouts/main',
+        ]
     ],
     'components' => [
         'request' => [

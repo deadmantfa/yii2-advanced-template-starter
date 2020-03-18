@@ -21,13 +21,11 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * Local SSL - [mkcert](https://github.com/FiloSottile/mkcert) 
 * Vagrant - [Vagrant](https://www.vagrantup.com/) 
 * Audit Trail - [Yii2 Audit](https://bedezign.github.io/yii2-audit/)
+* AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
 
 **@TODO**
 * Better Readme with more instructions
-* Admin Theme (All suggestions are welcomed) use the issue tracker
-* Impersonation
 * Notifications
 * Chat
 * Production ready
 * Automated Testing
-

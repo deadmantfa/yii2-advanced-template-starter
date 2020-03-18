@@ -19,7 +19,8 @@ class AdminLteAssets extends BaseAdminLteAsset
         'css/adminlte.min.css',
     ];
     public $js = [
-        'js/adminlte.min.js'
+        'js/adminlte.min.js',
+        'js/demo.js'
     ];
     public $depends = [
         YiiAsset::class,

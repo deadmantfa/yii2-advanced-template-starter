@@ -4,6 +4,7 @@ use bedezign\yii2\audit\Audit;
 use common\models\User;
 use Da\User\Component\AuthDbManagerComponent;
 use yii\caching\FileCache;
+use yii\web\AssetConverter;
 
 return [
     'aliases' => [
@@ -18,6 +19,8 @@ return [
             'compressData' => true,
             'userIdentifierCallback' => [User::class, 'userIdentifierCallback'],
             'userFilterCallback' => [User::class, 'filterByUserIdentifierCallback'],
+            'ignoreActions' => ['audit/*', 'debug/*'],
+            'maxAge' => 'debug',
         ]
     ],
     'container' => [
@@ -32,6 +35,14 @@ return [
         'authManager' => [
             'class' => AuthDbManagerComponent::class,
             'defaultRoles' => ['guest', 'user'],
+        ],
+        'assetManager' => [
+            'converter' => [
+                'class' => AssetConverter::class,
+                'commands' => [
+                    'scss' => ['css', '/home/vagrant/.npm-global/bin/sass {from} {to}']
+                ],
+            ],
         ],
     ],
 ];

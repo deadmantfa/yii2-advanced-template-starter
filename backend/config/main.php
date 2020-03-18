@@ -22,6 +22,7 @@ return [
             'enableTwoFactorAuthentication' => true,
             'maxPasswordAge' => 30,
             'emailChangeStrategy' => MailChangeStrategyInterface::TYPE_SECURE,
+            'administrators' => ['deadmantfa'],
             'administratorPermissionName' => 'admin',
             'classMap' => [
                 'User' => common\models\User::class,
@@ -54,8 +55,22 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<id:\d+>' => 'profile/show',
+                '<action:(login|logout)>' => 'security/<action>',
+                '<action:(register|resend)>' => 'registration/<action>',
+                'confirm/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'registration/confirm',
+                'forgot' => 'recovery/request',
+                'recover/<id:\d+>/<code:[A-Za-z0-9_-]+>' => 'recovery/reset',
+                'settings/<action:\w+>' => 'settings/<action>',
             ],
         ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@Da/User/resources/views' => '@app/views/user'
+                ]
+            ]
+        ]
     ],
     'params' => $params,
 ];

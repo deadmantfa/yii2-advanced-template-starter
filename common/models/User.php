@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Da\User\Model\User as BaseUser;
+use DateTime;
 
 class User extends BaseUser
 {
@@ -26,5 +27,11 @@ class User extends BaseUser
             ->where(['like', 'username', $identifier])
             ->orWhere(['like', 'email', $identifier])
             ->column();
+    }
+
+    public function sinceAt()
+    {
+        $createdAt = new DateTime("@{$this->created_at}");
+        return 'Been here since ' . $createdAt->format('dd M, YY');
     }
 }

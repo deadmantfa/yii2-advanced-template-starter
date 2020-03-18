@@ -2,6 +2,8 @@
 
 use bedezign\yii2\audit\Audit;
 use common\models\User;
+use Da\User\Component\AuthDbManagerComponent;
+use yii\caching\FileCache;
 
 return [
     'aliases' => [
@@ -25,10 +27,10 @@ return [
     ],
     'components' => [
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => FileCache::class,
         ],
         'authManager' => [
-            'class' => 'yii\rbac\DbManager',
+            'class' => AuthDbManagerComponent::class,
             'defaultRoles' => ['guest', 'user'],
         ],
     ],

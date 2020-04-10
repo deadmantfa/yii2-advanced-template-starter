@@ -23,7 +23,7 @@ timezone: Europe/London
 box_check_update: false
 
 # Virtual machine name
-machine_name: yii2-test-drive
+machine_name: <your-admin-role>  #unique machine name
 
 # Virtual machine IP
 ip: 192.168.83.137

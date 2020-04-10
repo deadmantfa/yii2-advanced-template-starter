@@ -21,6 +21,8 @@ echo "Done!"
 
 info "Install project dependencies"
 cd /app || exit
+composer config -g repo.packagist.org composer https://packagist.org
+composer config -g github-protocols https ssh
 composer --no-progress --prefer-dist -q install
 
 info "Init project"

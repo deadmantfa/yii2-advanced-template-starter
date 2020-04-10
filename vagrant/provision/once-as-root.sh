@@ -75,7 +75,6 @@ echo "Done!"
 info "Install additional software"
 apt-get install -y gcc g++ make php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug php7.2-dev php7.2-bcmath
 
-
 info "Update OS software"
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
 wget -q -O - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
@@ -98,7 +97,6 @@ apt-get install -y kibana
 systemctl enable kibana
 systemctl start kibana
 echo "Done!"
-
 
 info "Install Node 12 LTS"
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -

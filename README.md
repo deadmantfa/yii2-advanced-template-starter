@@ -1,13 +1,10 @@
-<h1 align="center">Yii 2 Advanced Project Template With Few Additions</h1>
+# Yii 2 Advanced Project Template With Few Additions
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with multiple tiers.
 
 Uses Vagrant development environment, local usage without vagrant is possible but will not be supported by me there are other tutorials that can help you.
 
-## Not Ready for Production yet
-
-### Already Done
+## Features
 
 * User Module, RBAC & 2FA - [Yii2 Usaruio](https://yii2-usuario.readthedocs.io/en/latest/)
 * OAuth2 Server Implementation - [Yii2 OAuth2 Server](https://github.com/chervand/yii2-oauth2-server)
@@ -23,9 +20,14 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * Audit Trail - [Yii2 Audit](https://bedezign.github.io/yii2-audit/)
 * AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
 
+
 **@TODO**
-* Better Readme with more instructions
-* Notifications
-* Chat
-* Production ready
-* Automated Testing
+* _Notifications_
+* _Chat_
+* _Production ready_
+* _Automated Testing_
+
+
+## Installation/Usage
+
+* [Wiki](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki)

@@ -52,6 +52,9 @@ rm -rf /app/vendor 2> /dev/null
 rm -f /app/composer.lock 2> /dev/null
 info "Done"
 
+info "Update OS"
+apt-get update
+apt-get upgrade -y
 
 info "Local SSL"
 cd ~ || exit

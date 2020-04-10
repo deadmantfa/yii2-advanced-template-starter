@@ -41,5 +41,8 @@ phpunit.phar
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
+/api/web/index.php
+/api/web/index-test.php
+/api/web/robots.txt
 /environments/dev/common/config/main-local.php
 /environments/dev/common/config/test-local.php

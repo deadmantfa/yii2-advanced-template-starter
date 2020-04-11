@@ -9,7 +9,7 @@ github_token=$(echo "$1")
 email=$(echo "$2")
 username=$(echo "$3")
 password=$(echo "$4")
-role=$(echo "$4")
+role=$(echo "$5")
 
 #== Provision script ==
 

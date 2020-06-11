@@ -20,13 +20,12 @@ Uses Vagrant development environment, local usage without vagrant is possible bu
 * Audit Trail - [Yii2 Audit](https://bedezign.github.io/yii2-audit/)
 * AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
 
-
 **@TODO**
 * _Notifications_
 * _Chat_
 * _Production ready_
 * _Automated Testing_
-
+* _Kubernetes_
 
 ## Installation/Usage
 

@@ -33,6 +33,6 @@ class User extends BaseUser
     public function sinceAt()
     {
         $createdAt = new DateTime("@{$this->created_at}");
-        return 'Been here since ' . $createdAt->format('dd M, YY');
+        return 'Been here since ' . $createdAt->format('d M, Y');
     }
 }

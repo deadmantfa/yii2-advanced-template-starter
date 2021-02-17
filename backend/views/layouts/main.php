@@ -43,7 +43,7 @@ if (in_array(Yii::$app->controller->action->id, $spl)) {
         <?php $this->head() ?>
     </head>
 
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini layout-fixed" style="height: auto;">
     <?php $this->beginBody() ?>
     <div class="wrapper">
 

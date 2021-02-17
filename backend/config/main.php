@@ -64,8 +64,8 @@ return [
                     'auth' => [
                         'VAPID' => [
                             'subject' => 'mailto:me@website.com',
-                            'publicKey' => 'BLKSeqxNeairZghlb2QSvdJ5FV25dTVhBPU7Xlm1yobjm3Lohzl47j9E8vZddXqI_uSCBeSV_aHynph66532hzY',
-                            'privateKey' => 'UhSr65JIiPorDLPe71XlOasypnqcc3J-aXIXdi-c4bw',
+                            'publicKey' => 'BB-OhQgxmiS8ER7Iij6OuNNqPoMYgzsjL5tZqzs3wpR-BaHVP-ei-4gHxLZ1nv8oXtC4DgKumrt2uMg7ZZ6zadw',
+                            'privateKey' => '_U44xGD7eB5CVVd5lZxAVOjHtJLfAQqNoidnY4zMd5k',
                             'reuseVAPIDHeaders' => true
                         ],
                     ],

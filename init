@@ -8,6 +8,7 @@
  * init --env=Development --overwrite=n
  */
 
+
 if (!extension_loaded('openssl')) {
     die('The OpenSSL PHP extension is required by Yii2.');
 }
@@ -17,6 +18,7 @@ $root = str_replace('\\', '/', __DIR__);
 $envs = require "$root/environments/index.php";
 $envNames = array_keys($envs);
 
+require_once "$root/vendor/autoload.php";
 echo "Yii Application Initialization Tool v1.0\n\n";
 
 $envName = null;
@@ -80,7 +82,7 @@ foreach ($files as $file) {
     }
 }
 
-$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'setEncryptionKey'];
+$callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'setEncryptionKey', 'setVapidKey'];
 foreach ($callbacks as $callback) {
     if (!empty($env[$callback])) {
         $callback($root, $env[$callback]);
@@ -227,6 +229,21 @@ function setEncryptionKey($root, $paths)
     }
 }
 
+function setVapidKey($root, $paths)
+{
+    foreach ($paths as $file) {
+        echo "   generate VAPID key in $file\n";
+        $file = $root . '/' . $file;
+        $keys = \Minishlink\WebPush\VAPID::createVapidKeys();
+        $publicKey = $keys['publicKey'];
+        $privateKey = $keys['privateKey'];
+        $search = ['/(("|\')publicKey("|\')\s*=>\s*)(""|\'\')/', '/(("|\')privateKey("|\')\s*=>\s*)(""|\'\')/'];
+        $replace = ["\\1'$publicKey'", "\\1'$privateKey'"];
+        $content = preg_replace($search, $replace, file_get_contents($file));
+        file_put_contents($file, $content);
+    }
+}
+
 function createSymlink($root, $links)
 {
     foreach ($links as $link => $target) {
@@ -311,3 +328,4 @@ function formatMessage(string $message, array $styles): string
 
     return sprintf("\x1b[%sm", implode(';', array_map('getStyleCode', $styles))) . $message . "\x1b[0m";
 }
+

@@ -50,6 +50,9 @@ return [
         ],
         'setEncryptionKey' => [
             'api/config/main.php',
+        ],
+        'setVapidKey' => [
+            'backend/config/main.php',
         ]
     ],
     'Production' => [
@@ -72,6 +75,9 @@ return [
         ],
         'setEncryptionKey' => [
             'api/config/main.php',
+        ],
+        'setVapidKey' => [
+            'backend/config/main.php',
         ]
     ],
 ];

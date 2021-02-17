@@ -58,7 +58,7 @@ apt-get upgrade -y
 
 info "Local SSL"
 cd ~ || exit
-apt-get install libnss3-tools -y
+apt-get install libnss3-tools curl apache2-utils apt-transport-https openjdk-8-jre jq -y
 wget -q https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64 > /dev/null 2>&1
 mv mkcert-v1.4.0-linux-amd64 mkcert
 chmod +x mkcert
@@ -73,21 +73,20 @@ openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/v
 echo "Done!"
 
 info "Install additional software"
-apt-get install -y gcc g++ make php7.2-curl php7.2-cli php7.2-intl php7.2-mysqlnd php7.2-gd php7.2-fpm php7.2-mbstring php7.2-xml unzip nginx mysql-server-5.7 php.xdebug php7.2-dev php7.2-bcmath
+apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip
 
 info "Update OS software"
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-wget -q -O - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 apt-get update
 apt-get upgrade -y
-apt-get install -y curl apache2-utils apt-transport-https openjdk-8-jre jq
 
 info "Install ElasticSearch"
 apt-get install -y elasticsearch
-systemctl start elasticsearch
 systemctl enable elasticsearch
+systemctl start elasticsearch
 sleep 20
 curl -X GET "localhost:9200" | jq '.'
 echo "Done!"
@@ -119,10 +118,10 @@ mysql -uroot <<< "FLUSH PRIVILEGES"
 echo "Done!"
 
 info "Configure PHP-FPM"
-sed -i 's/user = www-data/user = vagrant/g' /etc/php/7.2/fpm/pool.d/www.conf
-sed -i 's/group = www-data/group = vagrant/g' /etc/php/7.2/fpm/pool.d/www.conf
-sed -i 's/owner = www-data/owner = vagrant/g' /etc/php/7.2/fpm/pool.d/www.conf
-cat << EOF > /etc/php/7.2/mods-available/xdebug.ini
+sed -i 's/user = www-data/user = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
+sed -i 's/group = www-data/group = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
+sed -i 's/owner = www-data/owner = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
+cat << EOF > /etc/php/7.4/mods-available/xdebug.ini
 zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_connect_back=1

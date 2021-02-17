@@ -2,6 +2,7 @@
 
 use Da\User\Contracts\MailChangeStrategyInterface;
 use mirocow\elasticsearch\log\ElasticsearchTarget;
+use yii\web\ErrorHandler;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',

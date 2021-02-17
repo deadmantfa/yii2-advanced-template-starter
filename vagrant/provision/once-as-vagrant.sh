@@ -23,7 +23,7 @@ info "Install project dependencies"
 cd /app || exit
 composer config -g repo.packagist.org composer https://packagist.org
 composer config -g github-protocols https ssh
-composer --no-progress --prefer-dist -q install
+composer --no-progress --prefer-source -q update
 
 info "Init project"
 ./init --env=Development --overwrite=y
@@ -35,6 +35,12 @@ info "Apply migrations"
 ./yii_test migrate --interactive=0
 ./yii user/create "${email}" "${username}" "${password}" "${role}"
 ./yii user/confirm "${email}"
+
+info "Generate Keys"
+openssl genrsa -out api/oauth2/private.key 2048
+openssl rsa -in api/oauth2/private.key -pubout -out api/oauth2/public.key
+chmod 600 api/oauth2/private.key
+chmod 600 api/oauth2/public.key
 
 info "Create bash-alias 'app' for vagrant user"
 echo 'alias app="cd /app"' | tee /home/vagrant/.bash_aliases

@@ -6,26 +6,29 @@ namespace frontend\tests\unit\models;
 use Codeception\Test\Unit;
 use common\fixtures\UserFixture;
 use frontend\models\ResendVerificationEmailForm;
+use frontend\tests\UnitTester;
+use Yii;
+use yii\mail\MessageInterface;
 
 class ResendVerificationEmailFormTest extends Unit
 {
     /**
-     * @var \frontend\tests\UnitTester
+     * @var UnitTester
      */
-    protected $tester;
+    protected UnitTester $tester;
 
 
-    public function _before()
+    public function _before(): void
     {
         $this->tester->haveFixtures([
             'user' => [
-                'class' => UserFixture::className(),
+                'class' => UserFixture::class,
                 'dataFile' => codecept_data_dir() . 'user.php'
             ]
         ]);
     }
 
-    public function testWrongEmailAddress()
+    public function testWrongEmailAddress(): void
     {
         $model = new ResendVerificationEmailForm();
         $model->attributes = [
@@ -37,7 +40,7 @@ class ResendVerificationEmailFormTest extends Unit
         expect($model->getFirstError('email'))->equals('There is no user with this email address.');
     }
 
-    public function testEmptyEmailAddress()
+    public function testEmptyEmailAddress(): void
     {
         $model = new ResendVerificationEmailForm();
         $model->attributes = [
@@ -49,7 +52,7 @@ class ResendVerificationEmailFormTest extends Unit
         expect($model->getFirstError('email'))->equals('Email cannot be blank.');
     }
 
-    public function testResendToActiveUser()
+    public function testResendToActiveUser(): void
     {
         $model = new ResendVerificationEmailForm();
         $model->attributes = [
@@ -61,7 +64,7 @@ class ResendVerificationEmailFormTest extends Unit
         expect($model->getFirstError('email'))->equals('There is no user with this email address.');
     }
 
-    public function testSuccessfullyResend()
+    public function testSuccessfullyResend(): void
     {
         $model = new ResendVerificationEmailForm();
         $model->attributes = [
@@ -76,10 +79,10 @@ class ResendVerificationEmailFormTest extends Unit
 
         $mail = $this->tester->grabLastSentEmail();
 
-        expect('valid email is sent', $mail)->isInstanceOf('yii\mail\MessageInterface');
+        expect('valid email is sent', $mail)->isInstanceOf(MessageInterface::class);
         expect($mail->getTo())->hasKey('test@mail.com');
-        expect($mail->getFrom())->hasKey(\Yii::$app->params['supportEmail']);
-        expect($mail->getSubject())->equals('Account registration at ' . \Yii::$app->name);
+        expect($mail->getFrom())->hasKey(Yii::$app->params['supportEmail']);
+        expect($mail->getSubject())->equals('Account registration at ' . Yii::$app->name);
         expect($mail->toString())->stringContainsString('4ch0qbfhvWwkcuWqjN8SWRq72SOw1KYT_1548675330');
     }
 }

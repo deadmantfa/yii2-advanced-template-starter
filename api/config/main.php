@@ -5,6 +5,7 @@ use api\components\models\User;
 use chervand\yii2\oauth2\server\components\Grant\RevokeGrant;
 use chervand\yii2\oauth2\server\Module;
 use Da\User\Contracts\MailChangeStrategyInterface;
+use Defuse\Crypto\Key;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 use League\OAuth2\Server\Grant\ImplicitGrant;
 use League\OAuth2\Server\Grant\PasswordGrant;
@@ -30,7 +31,7 @@ return [
             'class' => Module::class,
             'privateKey' => __DIR__ . '/../oauth2/private.key',
             'publicKey' => __DIR__ . '/../oauth2/public.key',
-            'encryptionKey' => 'MxwSDiVmGA5uDtOxQy9cGYmzOiMnggfM0cWwX1Q2vMA=',
+            'encryptionKey' => Key::loadFromAsciiSafeString(''),
             'cache' => [
                 AccessTokenRepositoryInterface::class => [
                     'cacheDuration' => 3600,

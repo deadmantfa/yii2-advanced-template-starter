@@ -36,7 +36,7 @@ info "Apply migrations"
 ./yii user/create "${email}" "${username}" "${password}" "${role}"
 ./yii user/confirm "${email}"
 
-info "Generate Keys"
+info "Generate Keys for OAUTH2"
 openssl genrsa -out api/oauth2/private.key 2048
 openssl rsa -in api/oauth2/private.key -pubout -out api/oauth2/public.key
 chmod 600 api/oauth2/private.key

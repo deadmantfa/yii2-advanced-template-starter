@@ -1,10 +1,12 @@
 <?php
 
 use bedezign\yii2\audit\components\web\ErrorHandler;
+use common\models\User;
 use Da\User\Contracts\MailChangeStrategyInterface;
 use mirocow\elasticsearch\log\ElasticsearchTarget;
 use webzop\notifications\channels\ScreenChannel;
 use webzop\notifications\channels\WebChannel;
+use webzop\notifications\Module as NotificationModule;
 use yii\helpers\Url;
 
 $params = array_merge(
@@ -31,14 +33,14 @@ return [
             'enableSwitchIdentities' => YII_DEBUG,
             'allowAdminPasswordRecovery' => true,
             'classMap' => [
-                'User' => common\models\User::class,
+                'User' => User::class,
             ],
         ],
         'audit' => [
             'layout' => '@backend/views/layouts/main',
         ],
         'notifications' => [
-            'class' => \webzop\notifications\Module::class,
+            'class' => NotificationModule::class,
             'channels' => [
                 'screen' => [
                     'class' => ScreenChannel::class,
@@ -62,8 +64,8 @@ return [
                     'auth' => [
                         'VAPID' => [
                             'subject' => 'mailto:me@website.com',
-                            'publicKey' => 'BPmBy8YnUUV1-RngbZcPi38eXIrIUY1cW2gmV9QStfjUpP21rqQUHWD1aBaFaL-ZZmmpauldOUdl0GX9n59zK2M',
-                            'privateKey' => '3IFqWg4ya7Y4dSs9KctWg58LXegJe9jFV58zpuOVl9k',
+                            'publicKey' => 'BLKSeqxNeairZghlb2QSvdJ5FV25dTVhBPU7Xlm1yobjm3Lohzl47j9E8vZddXqI_uSCBeSV_aHynph66532hzY',
+                            'privateKey' => 'UhSr65JIiPorDLPe71XlOasypnqcc3J-aXIXdi-c4bw',
                             'reuseVAPIDHeaders' => true
                         ],
                     ],

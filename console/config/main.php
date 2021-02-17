@@ -49,7 +49,8 @@ return [
             'class' => MigrateController::class,
             'migrationPath' => [
                 '@app/migrations',
-                '@yii/rbac/migrations'
+                '@yii/rbac/migrations',
+                '@vendor/webzop/yii2-notifications/migrations'
             ],
             'migrationNamespaces' => [
                 'Da\User\Migration',

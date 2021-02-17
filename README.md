@@ -1,11 +1,15 @@
-
 # Yii 2 Advanced Project Template With Few Additions
 
-Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with multiple tiers.
+[![Codeac](https://static.codeac.io/badges/2-207509170.svg "Codeac")](https://app.codeac.io/github/deadmantfa/yii2-advanced-template-starter)
 
-Uses Vagrant development environment, local usage without vagrant is possible but will not be supported by me there are other tutorials that can help you.
+Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with
+multiple tiers.
 
-This template is created reduce repetitive work that is required to start off a project with all the modern must haves...
+Uses Vagrant development environment, local usage without vagrant is possible but will not be supported by me there are
+other tutorials that can help you.
+
+This template is created reduce repetitive work that is required to start off a project with all the modern must
+haves...
 
 ## Features
 

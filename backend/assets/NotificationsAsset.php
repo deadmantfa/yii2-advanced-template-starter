@@ -2,15 +2,15 @@
 
 namespace backend\assets;
 
-use dmstr\adminlte\web\FontAwesomeAsset;
-use webzop\notifications\WebNotificationsAsset;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Main frontend application asset bundle.
  */
-class AppAsset extends AssetBundle
+class NotificationsAsset extends AssetBundle
 {
+    public $sourcePath = __DIR__ . '/';
     /**
      * @inheritdoc
      */
@@ -25,22 +25,20 @@ class AppAsset extends AssetBundle
      * @inheritdoc
      */
     public $css = [
-        'css/glyphs.scss',
     ];
 
     /**
      * @inheritdoc
      */
     public $js = [
-//        'js/notifications.js',
+        'js/notifications.js',
     ];
 
     /**
      * @inheritdoc
      */
     public $depends = [
-        AdminLtePluginAsset::class,
-        FontAwesomeAsset::class,
-        WebNotificationsAsset::class
+        JqueryAsset::class,
+        'yii\web\YiiAsset',
     ];
 }

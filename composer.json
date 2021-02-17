@@ -40,7 +40,8 @@
     "kartik-v/yii2-datecontrol": "^1.9",
     "dmstr/yii2-adminlte-asset": "dev-master",
     "yiisoft/yii2-composer": "^2.0.10",
-    "phpoffice/phpspreadsheet": "^1.16.0"
+    "phpoffice/phpspreadsheet": "^1.16.0",
+    "webzop/yii2-notifications": "dev-master"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

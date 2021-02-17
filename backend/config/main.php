@@ -1,9 +1,11 @@
 <?php
 
-use bubasuma\simplechat\Module;
 use bedezign\yii2\audit\components\web\ErrorHandler;
 use Da\User\Contracts\MailChangeStrategyInterface;
 use mirocow\elasticsearch\log\ElasticsearchTarget;
+use webzop\notifications\channels\ScreenChannel;
+use webzop\notifications\channels\WebChannel;
+use yii\helpers\Url;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -34,7 +36,40 @@ return [
         ],
         'audit' => [
             'layout' => '@backend/views/layouts/main',
-        ]
+        ],
+        'notifications' => [
+            'class' => \webzop\notifications\Module::class,
+            'channels' => [
+                'screen' => [
+                    'class' => ScreenChannel::class,
+                ],
+//                'email' => [
+//                    'class' => EmailChannel::class,
+//                    'message' => [
+//                        'from' => 'example@email.com'
+//                    ],
+//                ],
+                'web' => [
+                    'class' => WebChannel::class,
+                    'enable' => true,
+                    'config' => [
+                        'serviceWorkerFilepath' => '/web/sw.js',
+                        'serviceWorkerScope' => '/',
+                        'serviceWorkerUrl' => Url::to('/sw.js'),
+                        'subscribeLabel' => 'On',
+                        'unsubscribeLabel' => 'Off',
+                    ],
+                    'auth' => [
+                        'VAPID' => [
+                            'subject' => 'mailto:me@website.com',
+                            'publicKey' => 'BPmBy8YnUUV1-RngbZcPi38eXIrIUY1cW2gmV9QStfjUpP21rqQUHWD1aBaFaL-ZZmmpauldOUdl0GX9n59zK2M',
+                            'privateKey' => '3IFqWg4ya7Y4dSs9KctWg58LXegJe9jFV58zpuOVl9k',
+                            'reuseVAPIDHeaders' => true
+                        ],
+                    ],
+                ],
+            ],
+        ],
     ],
     'components' => [
         'request' => [

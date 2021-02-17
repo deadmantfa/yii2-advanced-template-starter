@@ -2,7 +2,9 @@
 
 namespace backend\controllers;
 
+use backend\notifications\TestNotification;
 use common\models\LoginForm;
+use Exception;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -59,9 +61,11 @@ class SiteController extends Controller
      * Displays homepage.
      *
      * @return string
+     * @throws Exception
      */
     public function actionIndex(): string
     {
+        TestNotification::create('test', ['userId' => Yii::$app->user->id])->send();
         return $this->render('index');
     }
 

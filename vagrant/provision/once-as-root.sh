@@ -73,7 +73,7 @@ openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/v
 echo "Done!"
 
 info "Install additional software"
-apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip
+apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip php7.4-gmp
 
 info "Update OS software"
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list

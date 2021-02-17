@@ -13,11 +13,9 @@
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/deadmantfa/yii2-advanced-template-starter/issues?state=open",
-    "forum": "http://www.yiiframework.com/forum/",
-    "wiki": "http://www.yiiframework.com/wiki/",
-    "irc": "irc://irc.freenode.net/yii",
-    "source": "https://github.com/yiisoft/yii2"
+    "issues": "https://github.com/deadmantfa/yii2-advanced-template-starter/issues/new/choose",
+    "wiki": "https://github.com/deadmantfa/yii2-advanced-template-starter/wiki",
+    "source": "https://github.com/deadmantfa/yii2-advanced-template-starter"
   },
   "minimum-stability": "stable",
   "require": {
@@ -38,7 +36,7 @@
     "mirocow/yii2-elasticsearch-debug": "*",
     "ext-json": "*",
     "chervand/yii2-oauth2-server": "^0.7.1",
-    "bedezign/yii2-audit": "^1.0",
+    "bedezign/yii2-audit": "^1.1.2",
     "kartik-v/yii2-datecontrol": "^1.9",
     "dmstr/yii2-adminlte-asset": "dev-master",
     "yiisoft/yii2-composer": "^2.0.10",
@@ -49,8 +47,10 @@
     "yiisoft/yii2-debug": "^2.1.0",
     "yiisoft/yii2-gii": "^2.1.0",
     "yiisoft/yii2-faker": "^2.0.0",
-    "codeception/base": "^2.4.0",
-    "phpunit/phpunit": "~5.7.27 || ~6.5.5",
+    "codeception/codeception": "^4.0",
+    "codeception/module-asserts": "^1.0",
+    "codeception/module-yii2": "^1.0",
+    "codeception/module-filesystem": "^1.0",
     "codeception/verify": "~0.5.0 || ~1.1.0",
     "symfony/browser-kit": ">=2.7 <=4.2.4"
   },

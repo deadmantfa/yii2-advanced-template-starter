@@ -1,5 +1,6 @@
 <?php
 
+use bubasuma\simplechat\Module;
 use bedezign\yii2\audit\components\web\ErrorHandler;
 use Da\User\Contracts\MailChangeStrategyInterface;
 use mirocow\elasticsearch\log\ElasticsearchTarget;

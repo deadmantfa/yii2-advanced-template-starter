@@ -2,6 +2,7 @@
 # Yii 2 Advanced Project Template With Few Additions
 
 [![Codeac](https://static.codeac.io/badges/2-207509170.svg "Codeac")](https://app.codeac.io/github/deadmantfa/yii2-advanced-template-starter)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E226KBO)
 
 Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with
 multiple tiers.

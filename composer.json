@@ -17,7 +17,6 @@
     "wiki": "https://github.com/deadmantfa/yii2-advanced-template-starter/wiki",
     "source": "https://github.com/deadmantfa/yii2-advanced-template-starter"
   },
-  "minimum-stability": "stable",
   "require": {
     "php": ">=7.4.0",
     "yiisoft/yii2": "^2.0.40",

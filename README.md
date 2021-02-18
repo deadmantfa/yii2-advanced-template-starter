@@ -1,3 +1,4 @@
+![Yii Logo](https://www.yiiframework.com/image/yii_logo_light.svg)
 # Yii 2 Advanced Project Template With Few Additions
 
 [![Codeac](https://static.codeac.io/badges/2-207509170.svg "Codeac")](https://app.codeac.io/github/deadmantfa/yii2-advanced-template-starter)

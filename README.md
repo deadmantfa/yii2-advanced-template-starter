@@ -1,8 +1,13 @@
 ![Yii Logo](https://www.yiiframework.com/image/yii_logo_light.svg)
 # Yii 2 Advanced Project Template With Few Additions
 
-[![Codeac](https://static.codeac.io/badges/2-207509170.svg "Codeac")](https://app.codeac.io/github/deadmantfa/yii2-advanced-template-starter)
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E226KBO)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
+![GitHub Release Date](https://img.shields.io/github/release-date/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
+![GitHub release (latest by SemVer)](https://img.shields.io/github/downloads/deadmantfa/yii2-advanced-template-starter/latest/total?sort=semver&style=for-the-badge)
+![Packagist Stars](https://img.shields.io/packagist/stars/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
+![Maintenance](https://img.shields.io/maintenance/yes/2021?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/deadmantfa/yii2-advanced-template-starter?style=for-the-badge)
 
 Yii 2 Advanced Project Template is a skeleton Yii 2 application best for developing complex Web applications with
 multiple tiers.
@@ -30,7 +35,7 @@ haves...
 * AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
 * Multi-Channel Notification System (Added to the backend) - [Yii2 Notification](https://github.com/webzop/yii2-notifications)
 
-**@TODO**
+## **@TODO**
 * _Chat_
 * _Production ready_
 * _Automated Testing_
@@ -38,4 +43,6 @@ haves...
 
 ## Installation/Usage
 
-* [Wiki](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki)
+- [Wiki](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki)
+- [Getting Started](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Getting-Started)
+- [Setting Up](https://github.com/deadmantfa/yii2-advanced-template-starter/wiki/Setting-up)

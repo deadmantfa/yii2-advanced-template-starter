@@ -9,6 +9,7 @@ domain=$(echo "$2")
 domain_file="${domain/./-}"
 database=$(echo "$3")
 database_test=$(echo "$4")
+domain_ip=$(echo "$5")
 
 #== Provision script ==
 
@@ -73,7 +74,7 @@ openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/v
 echo "Done!"
 
 info "Install additional software"
-apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip php7.4-gmp
+apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip php7.4-gmp bash-completion
 
 info "Update OS software"
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
@@ -135,7 +136,7 @@ sed -i 's/user www-data/user vagrant/g' /etc/nginx/nginx.conf
 echo "Done!"
 
 info "Enabling site configuration"
-sed "s/example\.com/$domain/g; s/example-com/$domain_file/g" /app/vagrant/nginx/app_example.conf > /app/vagrant/nginx/app.conf
+sed "s/example\.com/$domain/g; s/example-com/$domain_file/g; s/example-ip/$domain_ip/g" /app/vagrant/nginx/app_example.conf > /app/vagrant/nginx/app.conf
 ln -s /app/vagrant/nginx/app.conf /etc/nginx/sites-enabled/app.conf
 echo "Done!"
 
@@ -150,3 +151,6 @@ info "Install composer"
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 htpasswd -cb /etc/nginx/htpasswd.users vagrant vagrant
+
+info "Yii Bash Completion"
+curl -L https://raw.githubusercontent.com/yiisoft/yii2/master/contrib/completion/bash/yii -o /etc/bash_completion.d/yii

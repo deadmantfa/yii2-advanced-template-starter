@@ -161,4 +161,3 @@ info "Enable Chat service"
 ln -s /app/vagrant/system-service/yii2-chat.service /etc/systemd/system/yii2-chat.service
 systemctl daemon-reload
 systemctl enable yii2-chat.service
-

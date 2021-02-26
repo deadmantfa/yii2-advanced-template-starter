@@ -156,3 +156,9 @@ htpasswd -cb /etc/nginx/htpasswd.users vagrant vagrant
 
 info "Yii Bash Completion"
 curl -L https://raw.githubusercontent.com/yiisoft/yii2/master/contrib/completion/bash/yii -o /etc/bash_completion.d/yii
+
+info "Enable Chat service"
+ln -s /app/vagrant/system-service/yii2-chat.service /etc/systemd/system/yii2-chat.service
+systemctl daemon-reload
+systemctl enable yii2-chat.service
+

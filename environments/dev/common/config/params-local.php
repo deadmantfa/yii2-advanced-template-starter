@@ -1,4 +1,4 @@
 <?php
 return [
-    'ws-link' => 'ws.example.com'
+    'ws-link' => 'ws.wd.test'
 ];

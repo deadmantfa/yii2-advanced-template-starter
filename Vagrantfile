@@ -32,7 +32,7 @@ if options['github_token'].nil? || options['github_token'].to_s.length != 40
   exit
 end
 
-# vagrant configurate
+# vagrant configure
 Vagrant.configure(2) do |config|
   # select the box
   config.vm.box = 'bento/ubuntu-20.04'
@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
   config.hostmanager.aliases            = domains.values
 
   # provisioners
-  config.vm.provision 'shell', path: './vagrant/provision/once-as-root.sh', args: [options['timezone'], options['domain'], options['database'], options['database_test'], options['ip'], domains.websocket]
+  config.vm.provision 'shell', path: './vagrant/provision/once-as-root.sh', args: [options['timezone'], options['domain'], options['database'], options['database_test'], options['ip'], domains[:websocket]]
   config.vm.provision 'shell', path: './vagrant/provision/once-as-vagrant.sh', args: [options['github_token'], options['email'], options['username'], options['password'], options['role']], privileged: false
   config.vm.provision 'shell', path: './vagrant/provision/always-as-root.sh', run: 'always'
   # post-install message (vagrant console)

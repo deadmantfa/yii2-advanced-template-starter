@@ -10,6 +10,7 @@ domain_file="${domain/./-}"
 database=$(echo "$3")
 database_test=$(echo "$4")
 domain_ip=$(echo "$5")
+ws=$(echo "$6")
 
 #== Provision script ==
 
@@ -145,6 +146,7 @@ mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database}"
 mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database_test}"
 sed "s/yii2advanced/$database/g" /app/environments/dev/common/config/main-local-example.php > /app/environments/dev/common/config/main-local.php
 sed "s/yii2advanced_test/$database_test/g" /app/environments/dev/common/config/test-local-example.php > /app/environments/dev/common/config/test-local.php
+sed "s/ws.example.com/$ws/g" /app/environments/dev/common/config/params-local-example.php > /app/environments/dev/common/config/params-local.php
 echo "Done!"
 
 info "Install composer"

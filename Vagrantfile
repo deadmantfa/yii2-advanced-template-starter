@@ -22,7 +22,7 @@ domains = {
   api:  'api.' + options['domain'],
   adminer:  'db.' + options['domain'],
   kibana:  'kibana.' + options['domain'],
-  requirements:  'req.' + options['domain']
+  requirements:  'req.' + options['domain'],
   websocket:  'ws.' + options['domain']
 }
 

@@ -34,7 +34,7 @@ haves...
 * Audit Trail - [Yii2 Audit](https://bedezign.github.io/yii2-audit/)
 * AdminLTE Theme v3 (Added to the backend) - [Yii2 Adminlte Asset](https://github.com/dmstr/yii2-adminlte-asset)
 * Multi-Channel Notification System (Added to the backend)
-    - [Yii2 Notification](https://github.com/webzop/yii2-notifications)
+  - [Yii2 Notification](https://github.com/webzop/yii2-notifications)
 * Websocket Based Chat System (Added to the backend) - [Yii2 Websocket](https://github.com/consik/yii2-websocket)
 
 ## **@TODO**

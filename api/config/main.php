@@ -31,7 +31,7 @@ return [
             'class' => Module::class,
             'privateKey' => __DIR__ . '/../oauth2/private.key',
             'publicKey' => __DIR__ . '/../oauth2/public.key',
-            'encryptionKey' => Key::loadFromAsciiSafeString(''),
+            'encryptionKey' => Key::loadFromAsciiSafeString('def0000095a6a564c9495753bb18ba79d1131a180ebf8dcde183c8df80d60dd2c13e3d9f04441c958e5e9fd8b87357305cf5b1cd51a2a1c1364958ac71ca0b18bd15cdc9'),
             'cache' => [
                 AccessTokenRepositoryInterface::class => [
                     'cacheDuration' => 3600,

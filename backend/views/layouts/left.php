@@ -40,6 +40,8 @@ use yii\web\View;
                     'items' => [
                         ['label' => 'Menu Yii2', 'header' => true],
                         ['label' => 'Dashboard', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/site/index']],
+                        ['label' => 'Chat', 'iconType' => 'fas', 'icon' => 'comment-alt', 'url' => ['/site/chat']],
+                        ['label' => 'Notification', 'iconType' => 'fas', 'icon' => 'bell', 'url' => ['/site/notification']],
                         [
                             'label' => 'Admin Tools',
                             'icon' => 'share',
@@ -50,7 +52,7 @@ use yii\web\View;
                                 ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/gii'],],
                                 ['label' => 'Audit Log', 'iconType' => 'fa', 'icon' => 'chalkboard', 'url' => ['/audit'],],
                             ],
-                            'visible' => Yii::$app->user->can('admin')
+                            'visible' => Yii::$app->user->can('Master')
                         ],
                     ],
                 ]

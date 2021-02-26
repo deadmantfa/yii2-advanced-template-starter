@@ -64,8 +64,8 @@ return [
                     'auth' => [
                         'VAPID' => [
                             'subject' => 'mailto:me@website.com',
-                            'publicKey' => '',
-                            'privateKey' => '',
+                            'publicKey' => 'BNduivdPEyEtVYzPfxU0CEIiZKT3XE_5TQ59CRPsBF2UujsRL6NOWY2p5By3QGpTvsovvz2PK3V9VlXjj1I4jUY',
+                            'privateKey' => 'Kw9VixJsDhytceyRsi2krJ3KatN89lqtHqgS_558o78',
                             'reuseVAPIDHeaders' => true
                         ],
                     ],

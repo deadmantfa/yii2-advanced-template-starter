@@ -27,7 +27,7 @@ return [
             'maxPasswordAge' => 30,
             'emailChangeStrategy' => MailChangeStrategyInterface::TYPE_SECURE,
             'administrators' => ['deadmantfa'],
-            'administratorPermissionName' => 'admin',
+            'administratorPermissionName' => 'Master',
             'enableTwoFactorAuthentication' => !YII_DEBUG,
             'enableRegistration' => false,
             'enableSwitchIdentities' => YII_DEBUG,

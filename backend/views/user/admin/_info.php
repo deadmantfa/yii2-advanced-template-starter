@@ -14,7 +14,9 @@
  * @var User $user
  */
 
-use Da\User\Model\User; ?>
+use Da\User\Model\User;
+
+?>
 
 <?php $this->beginContent('@backend/views/user/admin/update.php', ['user' => $user]) ?>
 

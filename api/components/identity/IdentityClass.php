@@ -8,23 +8,22 @@ use Da\User\Helper\SecurityHelper;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\UserRepositoryInterface;
 use yii\base\Security;
+use yii\db\ActiveQuery;
 use yii\web\IdentityInterface;
 
 /**
  *
  * @property mixed $identifier
- * @property mixed $accessTokens
+ * @property-read mixed $user
+ * @property-read mixed $authKey
  */
 class IdentityClass extends AccessToken implements UserRepositoryInterface, IdentityInterface
 {
 
-    public static function findIdentityByAccessToken($token, $type = null)
+    public static function findIdentityByAccessToken($token, $type = null): ?IdentityInterface
     {
         $token = static::find()->where(['identifier' => $token])->one();
-        if ($token) {
-            return $token->user;
-        }
-        return null;
+        return $token->user ?? null;
     }
 
     /**
@@ -32,7 +31,6 @@ class IdentityClass extends AccessToken implements UserRepositoryInterface, Iden
      */
     public function getUserEntityByUserCredentials($username, $password, $grantType, ClientEntityInterface $clientEntity)
     {
-        // TODO: Implement getUserEntityByUserCredentials() method.
         $user = User::findOne(['username' => $username]);
         if ($user === null) {
             return null;
@@ -45,7 +43,7 @@ class IdentityClass extends AccessToken implements UserRepositoryInterface, Iden
         return null;
     }
 
-    public function getUser()
+    public function getUser(): ActiveQuery
     {
         return $this->hasOne(User::class, ['id' => 'user_id']);
     }
@@ -55,12 +53,12 @@ class IdentityClass extends AccessToken implements UserRepositoryInterface, Iden
         return static::findOne($id);
     }
 
-    public function getAuthKey()
+    public function getAuthKey(): string
     {
         return $this->identifier;
     }
 
-    public function validateAuthKey($authKey)
+    public function validateAuthKey($authKey): bool
     {
         return $this->identifier === $authKey;
     }

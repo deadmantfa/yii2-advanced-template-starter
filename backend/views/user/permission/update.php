@@ -10,7 +10,7 @@
  */
 
 /**
- * @var Permission
+ * @var $model Permission
  * @var $this                     yii\web\View
  * @var $unassignedItems          string[]
  */
@@ -18,7 +18,9 @@
 $this->title = Yii::t('usuario', 'Update permission');
 $this->params['breadcrumbs'][] = $this->title;
 
-use Da\User\Model\Permission; ?>
+use Da\User\Model\Permission;
+
+?>
 
 <?php $this->beginContent('@backend/views/user/shared/admin_layout.php') ?>
 

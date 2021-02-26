@@ -11,7 +11,7 @@ use yii\filters\RateLimiter;
 
 trait CommonTrait
 {
-    public function behaviors()
+    public function behaviors(): array
     {
         $behaviors = parent::behaviors();
 

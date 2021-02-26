@@ -65,7 +65,7 @@ $timezoneHelper = $model->make(TimezoneHelper::class);
 
                 <?= $form
                     ->field($model, 'timezone')
-                    ->dropDownList(ArrayHelper::map($timezoneHelper->getAll(), 'timezone', 'name'));
+                    ->dropDownList(ArrayHelper::map($timezoneHelper::getAll(), 'timezone', 'name'));
                 ?>
                 <?= $form
                     ->field($model, 'gravatar_email')

@@ -13,6 +13,7 @@ use League\OAuth2\Server\Grant\RefreshTokenGrant;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
 use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
 use yii\caching\FileDependency;
+use yii\rest\UrlRule;
 use yii\web\Response;
 
 $params = array_merge(
@@ -42,7 +43,7 @@ return [
                     'cacheDependency' => new FileDependency(['fileName' => 'RefreshTokenRepositoryInterface.txt']),
                 ],
             ],
-            'enableGrantTypes' => function (Module &$module) {
+            'enableGrantTypes' => static function (Module &$module) {
                 $server = $module->authorizationServer;
                 $server->enableGrantType(new ImplicitGrant(
                     new DateInterval('PT1H')
@@ -120,7 +121,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 [
-                    'class' => 'yii\rest\UrlRule',
+                    'class' => UrlRule::class,
                     'controller' => 'v1/user',
                     'tokens' => [
                         '{id}' => '<id:\\w+>'

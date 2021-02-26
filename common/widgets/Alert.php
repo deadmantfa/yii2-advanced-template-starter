@@ -32,7 +32,7 @@ class Alert extends Widget
      * - key: the name of the session flash variable
      * - value: the bootstrap alert type (i.e. danger, success, info, warning)
      */
-    public $alertTypes = [
+    public array $alertTypes = [
         'error' => 'alert-danger',
         'danger' => 'alert-danger',
         'success' => 'alert-success',
@@ -43,13 +43,13 @@ class Alert extends Widget
      * @var array the options for rendering the close button tag.
      * Array will be passed to [[\yii\bootstrap4\Alert::closeButton]].
      */
-    public $closeButton = [];
+    public array $closeButton = [];
 
 
     /**
      * {@inheritdoc}
      */
-    public function run()
+    public function run(): string
     {
         $session = Yii::$app->session;
         $flashes = $session->getAllFlashes();

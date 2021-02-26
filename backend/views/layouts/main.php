@@ -48,8 +48,7 @@ if (in_array(Yii::$app->controller->action->id, $spl)) {
     <div class="wrapper">
 
         <?= $this->render(
-            'header.php',
-            ['directoryAsset' => $directoryAsset]
+            'header.php'
         ) ?>
 
         <?= $this->render(
@@ -60,7 +59,7 @@ if (in_array(Yii::$app->controller->action->id, $spl)) {
 
         <?= $this->render(
             'content.php',
-            ['content' => $content, 'directoryAsset' => $directoryAsset]
+            ['content' => $content]
         ) ?>
 
     </div>

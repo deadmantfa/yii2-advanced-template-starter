@@ -3,6 +3,7 @@
 namespace backend\notifications;
 
 use common\models\User;
+use Exception;
 use webzop\notifications\Notification;
 
 /**
@@ -13,7 +14,7 @@ use webzop\notifications\Notification;
  */
 class TestNotification extends Notification
 {
-    public $titleText = [
+    public array $titleText = [
         'What is Lorem Ipsum?',
         'Why do we use it?',
         'Where does it come from?',
@@ -21,7 +22,7 @@ class TestNotification extends Notification
         'Lorem Ipsum',
     ];
 
-    public $descriptionText = [
+    public array $descriptionText = [
         'Wikipedia has a recording of a cat meowing, because why not?',
         'Cats make more than 100 different sounds whereas dogs make around 10.',
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
@@ -35,12 +36,17 @@ class TestNotification extends Notification
 
     /**
      * @inheritdoc
+     * @throws Exception
      */
     public function getTitle(): string
     {
         return $this->titleText[random_int(0, 5)];
     }
 
+    /**
+     * @inheritdoc
+     * @throws Exception
+     */
     public function getDescription(): string
     {
         return $this->descriptionText[random_int(0, 5)];

@@ -10,7 +10,7 @@
  */
 
 /**
- * @var Role
+ * @var Role $model
  * @var $this               yii\web\View
  * @var $unassignedItems    string[]
  */

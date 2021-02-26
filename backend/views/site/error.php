@@ -25,7 +25,7 @@ $this->title = $name;
             <p>
                 The above error occurred while the Web server was processing your request.
                 Please contact us if you think this is a server error. Thank you.
-                Meanwhile, you may <?= Html::a('return to dashboard', Yii::$app->homeUrl); ?>
+                Meanwhile, you may <?= Html::a('return to dashboard', Yii::$app->homeUrl) ?>
             </p>
 
         </div>

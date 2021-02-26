@@ -7,7 +7,7 @@ use api\components\controllers\Controller;
 class AuthorizationController extends Controller
 {
 
-    public function actionLogin()
+    public function actionLogin(): void
     {
 
     }

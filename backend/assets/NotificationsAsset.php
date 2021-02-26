@@ -4,6 +4,7 @@ namespace backend\assets;
 
 use yii\web\AssetBundle;
 use yii\web\JqueryAsset;
+use yii\web\YiiAsset;
 
 /**
  * Main frontend application asset bundle.
@@ -39,6 +40,6 @@ class NotificationsAsset extends AssetBundle
      */
     public $depends = [
         JqueryAsset::class,
-        'yii\web\YiiAsset',
+        YiiAsset::class,
     ];
 }

@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]
             ) ?>
 
-        <?php if ($module->generatePasswords == false): ?>
+        <?php if ($module->generatePasswords === false): ?>
             <?= $form
                 ->field(
                     $model,

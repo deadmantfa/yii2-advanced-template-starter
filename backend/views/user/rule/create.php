@@ -17,7 +17,9 @@
 $this->title = Yii::t('usuario', 'Create new rule');
 $this->params['breadcrumbs'][] = $this->title;
 
-use Da\User\Model\Rule; ?>
+use Da\User\Model\Rule;
+
+?>
 
 <?php $this->beginContent('@backend/views/user/shared/admin_layout.php') ?>
 

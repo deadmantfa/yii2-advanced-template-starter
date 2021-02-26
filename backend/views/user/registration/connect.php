@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                 ]
             )
-            ->textInput(['placeholder' => $model->getAttributeLabel('email')]);
+            ->textInput(['placeholder' => $model->getAttributeLabel('email')])
         ?>
         <?=
         $form
@@ -72,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                 ]
             )
-            ->textInput(['placeholder' => $model->getAttributeLabel('username')]);
+            ->textInput(['placeholder' => $model->getAttributeLabel('username')])
         ?>
 
         <?= Html::submitButton(Yii::t('usuario', 'Continue'), ['class' => 'btn btn-success btn-block', 'tabindex' => '3']) ?>

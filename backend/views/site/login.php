@@ -1,6 +1,6 @@
 <?php
 
-use app\models\LoginForm;
+use common\models\LoginForm;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 use yii\web\View;
@@ -26,7 +26,7 @@ $this->title = 'Sign In';
             ]
         ])
             ->label(false)
-            ->textInput(['placeholder' => $model->getAttributeLabel('email')]); ?>
+            ->textInput(['placeholder' => $model->getAttributeLabel('email')]) ?>
 
         <?= $form->field($model, 'password', [
             'options' => ['class' => 'form-group has-feedback'],
@@ -37,17 +37,17 @@ $this->title = 'Sign In';
             ]
         ])
             ->label(false)
-            ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]); ?>
+            ->passwordInput(['placeholder' => $model->getAttributeLabel('password')]) ?>
 
         <div class="row">
             <div class="col-8">
                 <div class="icheck-primary">
-                    <?= $form->field($model, 'rememberMe')->checkbox(); ?>
+                    <?= $form->field($model, 'rememberMe')->checkbox() ?>
                 </div>
             </div>
 
             <div class="col-4">
-                <?= Html::submitButton('Sign in', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']); ?>
+                <?= Html::submitButton('Sign in', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
             </div>
         </div>
 

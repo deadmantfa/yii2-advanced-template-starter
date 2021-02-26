@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 [
                     'attribute' => 'className',
                     'label' => Yii::t('usuario', 'Class'),
-                    'value' => function ($row) {
+                    'value' => static function ($row) {
                         $rule = unserialize($row['data']);
 
                         return get_class($rule);
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 [
                     'class' => ActionColumn::class,
                     'template' => '{update} {delete}',
-                    'urlCreator' => function ($action, $model) {
+                    'urlCreator' => static function ($action, $model) {
                         return Url::to(['/user/rule/' . $action, 'name' => $model['name']]);
                     },
                     'options' => [

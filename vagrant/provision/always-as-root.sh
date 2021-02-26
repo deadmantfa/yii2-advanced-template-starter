@@ -7,8 +7,9 @@ source /app/vagrant/provision/common.sh
 info "Provision-script user: $(whoami)"
 
 info "Restart web-stack"
-service php7.4-fpm restart
-service nginx restart
-service mysql restart
-service elasticsearch restart
-service kibana restart
+systemctl restart php7.4-fpm
+systemctl restart nginx
+systemctl restart mysql
+systemctl restart elasticsearch
+systemctl restart kibana
+systemctl restart yii2-chat

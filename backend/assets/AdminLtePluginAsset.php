@@ -14,6 +14,7 @@ class AdminLtePluginAsset extends AssetBundle
     ];
     public $js = [
         // more plugin Js here
+        'moment/moment.min.js'
     ];
     public $depends = [
         AdminLteAssets::class,

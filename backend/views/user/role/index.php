@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 [
                     'class' => ActionColumn::class,
                     'template' => '{update} {delete}',
-                    'urlCreator' => function ($action, $model) {
+                    'urlCreator' => static function ($action, $model) {
                         return Url::to(['/user/role/' . $action, 'name' => $model['name']]);
                     },
                     'options' => [

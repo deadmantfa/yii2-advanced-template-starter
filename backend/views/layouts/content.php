@@ -12,7 +12,7 @@ use yii\helpers\Inflector;
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <?php if (isset($this->blocks['content-header'])) { ?>
-                        <h1><?= $this->blocks['content-header']; ?></h1>
+                        <h1><?= $this->blocks['content-header'] ?></h1>
                     <?php } else { ?>
                         <h1>
                             <?php
@@ -30,19 +30,22 @@ use yii\helpers\Inflector;
 
                 <div class="col-sm-6">
                     <?= Breadcrumbs::widget([
-                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        'links' => $this->params['breadcrumbs'] ?? [],
                         'options' => [
                             'class' => 'float-sm-right'
                         ]
-                    ]); ?>
+                    ]) ?>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="content">
-        <?= Alert::widget(); ?>
-        <?= $content ?>
+        <?= Alert::widget() ?>
+        <?=
+        /** @var string $content */
+        $content
+        ?>
     </section>
 </div>
 

@@ -22,36 +22,36 @@ info "Configure timezone"
 timedatectl set-timezone "${timezone}" --no-ask-password
 
 info "Prepare root password for MySQL"
-debconf-set-selections <<< "mysql-community-server mysql-community-server/root-pass password \"''\""
-debconf-set-selections <<< "mysql-community-server mysql-community-server/re-root-pass password \"''\""
+debconf-set-selections <<<"mysql-community-server mysql-community-server/root-pass password \"''\""
+debconf-set-selections <<<"mysql-community-server mysql-community-server/re-root-pass password \"''\""
 echo "Done!"
 
 info "Remove old files"
-rm -f /app/environments/dev/common/config/main-local.php 2> /dev/null
-rm -f /app/environments/dev/common/config/test-local.php 2> /dev/null
-rm -f /app/common/config/main-local.php 2> /dev/null
-rm -f /app/common/config/test-local.php 2> /dev/null
-rm -f /app/common/config/main-local-example.php 2> /dev/null
-rm -f /app/common/config/test-local-example.php 2> /dev/null
-rm -f /app/common/config/params-local.php 2> /dev/null
-rm -f /app/common/config/codeception-local.php 2> /dev/null
+rm -f /app/environments/dev/common/config/main-local.php 2>/dev/null
+rm -f /app/environments/dev/common/config/test-local.php 2>/dev/null
+rm -f /app/common/config/main-local.php 2>/dev/null
+rm -f /app/common/config/test-local.php 2>/dev/null
+rm -f /app/common/config/main-local-example.php 2>/dev/null
+rm -f /app/common/config/test-local-example.php 2>/dev/null
+rm -f /app/common/config/params-local.php 2>/dev/null
+rm -f /app/common/config/codeception-local.php 2>/dev/null
 
-rm -f /app/console/config/main-local.php 2> /dev/null
-rm -f /app/console/config/test-local.php 2> /dev/null
-rm -f /app/console/config/params-local.php 2> /dev/null
+rm -f /app/console/config/main-local.php 2>/dev/null
+rm -f /app/console/config/test-local.php 2>/dev/null
+rm -f /app/console/config/params-local.php 2>/dev/null
 
-rm -f /app/backend/config/main-local.php 2> /dev/null
-rm -f /app/backend/config/test-local.php 2> /dev/null
-rm -f /app/backend/config/params-local.php 2> /dev/null
-rm -f /app/backend/config/codeception-local.php 2> /dev/null
+rm -f /app/backend/config/main-local.php 2>/dev/null
+rm -f /app/backend/config/test-local.php 2>/dev/null
+rm -f /app/backend/config/params-local.php 2>/dev/null
+rm -f /app/backend/config/codeception-local.php 2>/dev/null
 
-rm -f /app/frontend/config/main-local.php 2> /dev/null
-rm -f /app/frontend/config/test-local.php 2> /dev/null
-rm -f /app/frontend/config/params-local.php 2> /dev/null
-rm -f /app/frontend/config/codeception-local.php 2> /dev/null
+rm -f /app/frontend/config/main-local.php 2>/dev/null
+rm -f /app/frontend/config/test-local.php 2>/dev/null
+rm -f /app/frontend/config/params-local.php 2>/dev/null
+rm -f /app/frontend/config/codeception-local.php 2>/dev/null
 
-rm -rf /app/vendor 2> /dev/null
-rm -f /app/composer.lock 2> /dev/null
+rm -rf /app/vendor 2>/dev/null
+rm -f /app/composer.lock 2>/dev/null
 info "Done"
 
 info "Update OS"
@@ -61,17 +61,17 @@ apt-get upgrade -y
 info "Local SSL"
 cd ~ || exit
 apt-get install libnss3-tools curl apache2-utils apt-transport-https openjdk-8-jre jq -y
-wget -q https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64 > /dev/null 2>&1
+wget -q https://github.com/FiloSottile/mkcert/releases/download/v1.4.0/mkcert-v1.4.0-linux-amd64 >/dev/null 2>&1
 mv mkcert-v1.4.0-linux-amd64 mkcert
 chmod +x mkcert
 cp mkcert /usr/local/bin/
 export CAROOT=/app/vagrant/nginx/ssl/root/
-mkcert -install > /dev/null 2>&1
-mkcert "*.${domain}" > /dev/null 2>&1
+mkcert -install >/dev/null 2>&1
+mkcert "*.${domain}" >/dev/null 2>&1
 cp "/root/_wildcard.${domain}.pem" /app/vagrant/nginx/ssl/.
 cp "/root/_wildcard.${domain}-key.pem" /app/vagrant/nginx/ssl/.
 rm -Rf /app/vagrant/nginx/ssl/root/rootCA.crt
-openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/vagrant/nginx/ssl/root/rootCA.crt > /dev/null 2>&1
+openssl x509 -outform der -in /app/vagrant/nginx/ssl/root/rootCA.pem -out /app/vagrant/nginx/ssl/root/rootCA.crt >/dev/null 2>&1
 echo "Done!"
 
 info "Install additional software"
@@ -107,23 +107,23 @@ info "Install Sass"
 mkdir /home/vagrant/.npm-global
 npm config set prefix '/home/vagrant/.npm-global'
 export PATH=/home/vagrant/.npm-global/bin:$PATH
-echo "export PATH=/home/vagrant/.npm-global/bin:$PATH" >> /home/vagrant/.profile
+echo "export PATH=/home/vagrant/.npm-global/bin:$PATH" >>/home/vagrant/.profile
 source /home/vagrant/.profile
 npm install -g sass
 
 info "Configure MySQL"
 sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
-mysql -uroot <<< "CREATE USER 'root'@'%' IDENTIFIED BY ''"
-mysql -uroot <<< "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'"
-mysql -uroot <<< "DROP USER 'root'@'localhost'"
-mysql -uroot <<< "FLUSH PRIVILEGES"
+mysql -uroot <<<"CREATE USER 'root'@'%' IDENTIFIED BY ''"
+mysql -uroot <<<"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'"
+mysql -uroot <<<"DROP USER 'root'@'localhost'"
+mysql -uroot <<<"FLUSH PRIVILEGES"
 echo "Done!"
 
 info "Configure PHP-FPM"
 sed -i 's/user = www-data/user = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
 sed -i 's/group = www-data/group = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
 sed -i 's/owner = www-data/owner = vagrant/g' /etc/php/7.4/fpm/pool.d/www.conf
-cat << EOF > /etc/php/7.4/mods-available/xdebug.ini
+cat <<EOF >/etc/php/7.4/mods-available/xdebug.ini
 zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_connect_back=1
@@ -137,16 +137,16 @@ sed -i 's/user www-data/user vagrant/g' /etc/nginx/nginx.conf
 echo "Done!"
 
 info "Enabling site configuration"
-sed "s/example\.com/$domain/g; s/example-com/$domain_file/g; s/example-ip/$domain_ip/g" /app/vagrant/nginx/app_example.conf > /app/vagrant/nginx/app.conf
+sed "s/example\.com/$domain/g; s/example-com/$domain_file/g; s/example-ip/$domain_ip/g" /app/vagrant/nginx/app_example.conf >/app/vagrant/nginx/app.conf
 ln -s /app/vagrant/nginx/app.conf /etc/nginx/sites-enabled/app.conf
 echo "Done!"
 
 info "Initailize databases for MySQL"
-mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database}"
-mysql -uroot <<< "CREATE DATABASE IF NOT EXISTS ${database_test}"
-sed "s/yii2advanced/$database/g" /app/environments/dev/common/config/main-local-example.php > /app/environments/dev/common/config/main-local.php
-sed "s/yii2advanced_test/$database_test/g" /app/environments/dev/common/config/test-local-example.php > /app/environments/dev/common/config/test-local.php
-sed "s/ws.example.com/$ws/g" /app/environments/dev/common/config/params-local-example.php > /app/environments/dev/common/config/params-local.php
+mysql -uroot <<<"CREATE DATABASE IF NOT EXISTS ${database}"
+mysql -uroot <<<"CREATE DATABASE IF NOT EXISTS ${database_test}"
+sed "s/yii2advanced/$database/g" /app/environments/dev/common/config/main-local-example.php >/app/environments/dev/common/config/main-local.php
+sed "s/yii2advanced_test/$database_test/g" /app/environments/dev/common/config/test-local-example.php >/app/environments/dev/common/config/test-local.php
+sed "s/ws.example.com/$ws/g" /app/environments/dev/common/config/params-local-example.php >/app/environments/dev/common/config/params-local.php
 echo "Done!"
 
 info "Install composer"

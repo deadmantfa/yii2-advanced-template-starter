@@ -30,6 +30,21 @@ use yii\web\View;
                 'class' => 'badge badge-warning navbar-badge'
             ]
         ]) ?>
+
+        <li class="nav-item">
+
+            <?php
+            $module = Yii::$app->getModule('user');
+
+            if (Yii::$app->session->has($module->switchIdentitySessionKey)) {
+                echo Html::a(
+                    '<i class="fas fa-quidditch"></i>',
+                    ['/user/admin/switch-identity'],
+                    ['data-method' => 'post', 'class' => 'nav-link']
+                );
+            }
+            ?>
+        </li>
         <li class="nav-item dropdown">
             <?= Html::a(
                 Html::icon('sign-out-alt', [], 'fas fa-'),

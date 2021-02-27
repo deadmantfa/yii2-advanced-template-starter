@@ -48,9 +48,10 @@ use yii\web\View;
                             'url' => '#',
                             'items' => [
                                 ['label' => 'User Management', 'iconType' => 'far', 'icon' => 'user', 'url' => ['/user/admin/index'],],
+                                ['label' => 'RBAC', 'iconType' => 'fas', 'icon' => 'universal-access', 'url' => ['/rbac'],],
                                 ['label' => 'Debug', 'icon' => 'tachometer-alt', 'url' => ['/debug'],],
                                 ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/gii'],],
-                                ['label' => 'Audit Log', 'iconType' => 'fa', 'icon' => 'chalkboard', 'url' => ['/audit'],],
+                                ['label' => 'Audit Log', 'iconType' => 'fas', 'icon' => 'chart-bar', 'url' => ['/audit'],],
                             ],
                             'visible' => Yii::$app->user->can('Master')
                         ],

@@ -1,5 +1,21 @@
 <?php
+
+use bedezign\yii2\audit\Audit;
+use common\models\User;
+use yii\swiftmailer\Mailer;
+
 return [
+    'modules' => [
+        'audit' => [
+            'class' => Audit::class,
+            'accessRoles' => ['Administrator'],
+            'compressData' => true,
+            'userIdentifierCallback' => [User::class, 'userIdentifierCallback'],
+            'userFilterCallback' => [User::class, 'filterByUserIdentifierCallback'],
+            'ignoreActions' => ['audit/*', 'debug/*'],
+            'maxAge' => 'debug',
+        ],
+    ],
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
@@ -9,7 +25,7 @@ return [
             'charset' => 'utf8',
         ],
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
+            'class' => Mailer::class,
             'viewPath' => '@common/mail',
         ],
     ],

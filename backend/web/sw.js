@@ -30,17 +30,12 @@ self.addEventListener('notificationclick', function (event) {
 
 
 self.addEventListener('push', function (e) {
-
-    console.log('push notification recived');
-
     // handle data from push server
     let title = 'Web Push Notification';
     let options;
 
     if (e.data) {
-
         let push_data = e.data.json();
-        console.log(push_data);
 
         options = push_data;
         options.timestamp = Math.floor(Date.now());

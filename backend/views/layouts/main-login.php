@@ -32,7 +32,7 @@ dmstr\adminlte\web\FontAwesomeAsset::register($this);
         <?= Html::a('<b>Admin</b>LTE', ['/user/login']) ?>
     </div>
 
-    <?= Alert::widget(); ?>
+    <?= Alert::widget() ?>
 
     <?= $content ?>
 </div>

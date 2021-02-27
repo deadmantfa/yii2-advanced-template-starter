@@ -2,61 +2,18 @@
 
 namespace backend\controllers;
 
+use backend\components\Controller;
 use backend\notifications\TestNotification;
 use common\models\LoginForm;
 use common\models\User;
 use Exception;
 use Yii;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
-use yii\web\Controller;
-use yii\web\ErrorAction;
 
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors(): array
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::class,
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index', 'chat', 'notification'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function actions(): array
-    {
-        return [
-            'error' => [
-                'class' => ErrorAction::class,
-            ],
-        ];
-    }
 
     /**
      * Displays homepage.
@@ -66,7 +23,6 @@ class SiteController extends Controller
      */
     public function actionIndex(): string
     {
-//        TestNotification::create('test', ['userId' => Yii::$app->user->id])->send();
         return $this->render('index');
     }
 
@@ -114,7 +70,6 @@ class SiteController extends Controller
      */
     public function actionChat(): string
     {
-//        TestNotification::create('test', ['userId' => Yii::$app->user->id])->send();
         return $this->render('chat');
     }
 

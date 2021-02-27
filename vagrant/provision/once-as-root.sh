@@ -79,9 +79,8 @@ apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-
 
 info "Update OS software"
 rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
 apt-get update
 apt-get upgrade -y
 
@@ -100,7 +99,7 @@ systemctl start kibana
 echo "Done!"
 
 info "Install Node 12 LTS"
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get install -y nodejs
 
 info "Install Sass"

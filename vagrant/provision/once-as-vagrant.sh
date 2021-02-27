@@ -13,7 +13,7 @@ role=$(echo "$5")
 
 #== Provision script ==
 
-info "Provision-script user: `whoami`"
+info "Provision-script user: $(whoami)"
 
 info "Configure composer"
 composer config --global github-oauth.github.com ${github_token}
@@ -33,6 +33,7 @@ rm -f /app/common/config/test-local-example.php
 info "Apply migrations"
 ./yii migrate --interactive=0
 ./yii_test migrate --interactive=0
+yes | ./yii rbac/init
 ./yii user/create "${email}" "${username}" "${password}" "${role}"
 ./yii user/confirm "${email}"
 

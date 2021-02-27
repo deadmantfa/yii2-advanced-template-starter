@@ -1,9 +1,23 @@
 <?php
 
+use mirocow\elasticsearch\log\ElasticsearchTarget;
 use yii\gii\Module;
 
 return [
-    'bootstrap' => ['gii'],
+    'bootstrap' => ['gii', 'log'],
+
+    'components' => [
+        'log' => [
+            'targets' => [
+                [
+                    'class' => ElasticsearchTarget::class,
+                    'levels' => ['error', 'warning'],
+                    'index' => 'fdi-app-log',
+                    'type' => 'console'
+                ],
+            ],
+        ],
+    ],
     'modules' => [
         'gii' => [
             'class' => Module::class,

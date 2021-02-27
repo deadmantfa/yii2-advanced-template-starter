@@ -1,8 +1,7 @@
 <?php
 
-use bedezign\yii2\audit\Audit;
-use common\models\User;
-use Da\User\Component\AuthDbManagerComponent;
+use justcoded\yii2\rbac\components\DbManager;
+use justcoded\yii2\rbac\Module;
 use yii\caching\FileCache;
 use yii\web\AssetConverter;
 
@@ -13,15 +12,9 @@ return [
     ],
     'vendorPath' => dirname(__DIR__, 2) . '/vendor',
     'modules' => [
-        'audit' => [
-            'class' => Audit::class,
-            'accessRoles' => ['admin'],
-            'compressData' => true,
-            'userIdentifierCallback' => [User::class, 'userIdentifierCallback'],
-            'userFilterCallback' => [User::class, 'filterByUserIdentifierCallback'],
-            'ignoreActions' => ['audit/*', 'debug/*'],
-            'maxAge' => 'debug',
-        ]
+        'rbac' => [
+            'class' => Module::class
+        ],
     ],
     'container' => [
         'definitions' => [
@@ -33,8 +26,8 @@ return [
             'class' => FileCache::class,
         ],
         'authManager' => [
-            'class' => AuthDbManagerComponent::class,
-            'defaultRoles' => ['guest', 'user'],
+            'class' => DbManager::class,
+            'defaultRoles' => ['Guest'],
         ],
         'assetManager' => [
             'converter' => [

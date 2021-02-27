@@ -1,8 +1,8 @@
 <?php
 
 use bedezign\yii2\audit\components\console\ErrorHandler;
+use justcoded\yii2\rbac\commands\RbacController;
 use kartik\tree\Module;
-use mirocow\elasticsearch\log\ElasticsearchTarget;
 use yii\console\controllers\FixtureController;
 use yii\console\controllers\MigrateController;
 
@@ -16,7 +16,7 @@ $params = array_merge(
 return [
     'id' => 'app-console',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [],
     'controllerNamespace' => 'console\controllers',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -57,6 +57,10 @@ return [
                 'bedezign\yii2\audit\migrations',
             ],
         ],
+
+        'rbac' => [
+            'class' => RbacController::class,
+        ],
     ],
     'components' => [
         'errorHandler' => [
@@ -69,16 +73,6 @@ return [
             'showScriptName' => false,
             'baseUrl' => 'https://front.fd.test/',
             'rules' => [
-            ],
-        ],
-        'log' => [
-            'targets' => [
-                [
-                    'class' => ElasticsearchTarget::class,
-                    'levels' => ['error', 'warning'],
-                    'index' => 'yii-log',
-                    'type' => 'console',
-                ],
             ],
         ],
     ],

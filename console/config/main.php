@@ -2,7 +2,9 @@
 
 use bedezign\yii2\audit\components\console\ErrorHandler;
 use justcoded\yii2\rbac\commands\RbacController;
-use kartik\tree\Module;
+use kartik\datecontrol\Module as DateControlModule;
+use kartik\grid\Module as GridviewModule;
+use kartik\tree\Module as TreeModule;
 use yii\console\controllers\FixtureController;
 use yii\console\controllers\MigrateController;
 
@@ -27,16 +29,16 @@ return [
             'class' => Da\User\Module::class,
         ],
         'gridview' => [
-            'class' => \kartik\grid\Module::class,
+            'class' => GridviewModule::class,
             // see settings on http://demos.krajee.com/grid#module
         ],
         'datecontrol' => [
-            'class' => \kartik\datecontrol\Module::class,
+            'class' => DateControlModule::class,
             // see settings on http://demos.krajee.com/datecontrol#module
         ],
         // If you use tree table
         'treemanager' => [
-            'class' => Module::class,
+            'class' => TreeModule::class,
             // see settings on http://demos.krajee.com/tree-manager#module
         ],
     ],

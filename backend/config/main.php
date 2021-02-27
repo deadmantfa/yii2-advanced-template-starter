@@ -30,7 +30,7 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'user'],
     'controllerNamespace' => 'backend\controllers',
     'defaultRoute' => '/user/security/login',
     'modules' => [

@@ -2,6 +2,7 @@
 
 use bedezign\yii2\audit\Audit;
 use common\models\User;
+use yii\db\Connection;
 use yii\swiftmailer\Mailer;
 
 return [
@@ -18,7 +19,7 @@ return [
     ],
     'components' => [
         'db' => [
-            'class' => 'yii\db\Connection',
+            'class' => Connection::class,
             'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
             'username' => 'root',
             'password' => '',
@@ -28,5 +29,5 @@ return [
             'class' => Mailer::class,
             'viewPath' => '@common/mail',
         ],
-    ],
+    ]
 ];

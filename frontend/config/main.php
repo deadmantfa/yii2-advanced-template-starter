@@ -1,7 +1,6 @@
 <?php
 
 use Da\User\Contracts\MailChangeStrategyInterface;
-use mirocow\elasticsearch\log\ElasticsearchTarget;
 use yii\web\ErrorHandler;
 
 $params = array_merge(
@@ -35,16 +34,6 @@ return [
         'session' => [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',
-        ],
-        'log' => [
-            'targets' => [
-                [
-                    'class' => ElasticsearchTarget::class,
-                    'levels' => ['error', 'warning'],
-                    'index' => 'yii-log',
-                    'type' => 'frontend',
-                ],
-            ],
         ],
         'errorHandler' => [
             'class' => ErrorHandler::class,

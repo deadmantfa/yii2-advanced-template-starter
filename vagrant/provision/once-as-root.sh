@@ -98,8 +98,8 @@ systemctl enable kibana
 systemctl start kibana
 echo "Done!"
 
-info "Install Node 12 LTS"
-curl -sL https://deb.nodesource.com/setup_12.x | bash -
+info "Install Node 14 LTS"
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
 
 info "Install Sass"

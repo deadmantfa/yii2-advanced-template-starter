@@ -6,8 +6,7 @@
     "framework",
     "advanced",
     "project template",
-    "Vagrant",
-    "ElasticSearch"
+    "Vagrant"
   ],
   "homepage": "http://www.yiiframework.com/",
   "type": "project",
@@ -30,9 +29,6 @@
     "kartik-v/yii2-mpdf": "dev-master",
     "kartik-v/yii2-tree-manager": "dev-master",
     "mootensai/yii2-relation-trait": "*",
-    "mirocow/yii2-elasticsearch": "*",
-    "mirocow/yii2-elasticsearch-log": "*",
-    "mirocow/yii2-elasticsearch-debug": "*",
     "ext-json": "*",
     "chervand/yii2-oauth2-server": "^0.7.1",
     "bedezign/yii2-audit": "^1.1.2",
@@ -46,7 +42,7 @@
     "yii2mod/yii2-rbac": "*"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
+    "roave/security-advisories": "dev-latest",
     "yiisoft/yii2-debug": "^2.1.0",
     "yiisoft/yii2-gii": "^2.1.0",
     "yiisoft/yii2-faker": "^2.0.0",

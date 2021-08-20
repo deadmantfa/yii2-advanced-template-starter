@@ -1,6 +1,7 @@
 <?php
 
 use Da\User\Contracts\MailChangeStrategyInterface;
+use yii\log\FileTarget;
 use yii\web\ErrorHandler;
 
 $params = array_merge(
@@ -43,6 +44,15 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+            ],
+        ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => FileTarget::class,
+                    'levels' => ['error', 'warning'],
+                ],
             ],
         ],
     ],

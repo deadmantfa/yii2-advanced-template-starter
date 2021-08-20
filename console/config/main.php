@@ -52,7 +52,8 @@ return [
             'migrationPath' => [
                 '@app/migrations',
                 '@yii/rbac/migrations',
-                '@vendor/webzop/yii2-notifications/migrations'
+                '@vendor/webzop/yii2-notifications/migrations',
+                '@vendor/chervand/yii2-oauth2-server/migrations'
             ],
             'migrationNamespaces' => [
                 'Da\User\Migration',

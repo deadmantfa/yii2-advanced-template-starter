@@ -77,27 +77,6 @@ echo "Done!"
 info "Install additional software"
 apt-get install -y gnupg gcc g++ make php7.4-curl php7.4-cli php7.4-intl php7.4-mysqlnd php7.4-gd php7.4-fpm php7.4-mbstring php7.4-xml unzip nginx mysql-server php.xdebug php7.4-dev php7.4-bcmath php7.4-zip php7.4-gmp bash-completion
 
-info "Update OS software"
-rm -Rf /etc/apt/sources.list.d/elastic-5.x.list
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-5.x.list
-apt-get update
-apt-get upgrade -y
-
-info "Install ElasticSearch"
-apt-get install -y elasticsearch
-systemctl enable elasticsearch
-systemctl start elasticsearch
-sleep 20
-curl -X GET "localhost:9200" | jq '.'
-echo "Done!"
-
-info "Install Kibana"
-apt-get install -y kibana
-systemctl enable kibana
-systemctl start kibana
-echo "Done!"
-
 info "Install Node 14 LTS"
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get install -y nodejs
@@ -160,3 +139,4 @@ info "Enable Chat service"
 ln -s /app/vagrant/system-service/yii2-chat.service /etc/systemd/system/yii2-chat.service
 systemctl daemon-reload
 systemctl enable yii2-chat.service
+systemctl start yii2-chat.service

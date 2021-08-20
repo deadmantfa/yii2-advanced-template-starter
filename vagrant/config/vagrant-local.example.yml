@@ -32,4 +32,4 @@ ip: 192.168.83.137
 cpus: 2
 
 # Virtual machine RAM
-memory: 4096
+memory: 2048

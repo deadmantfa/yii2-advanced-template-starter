@@ -1,6 +1,5 @@
 <?php
 
-use mirocow\elasticsearch\log\ElasticsearchTarget;
 
 return [
     'components' => [

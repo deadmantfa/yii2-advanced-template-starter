@@ -1,12 +1,13 @@
 [Unit]
 Description=Yii2 Chat Service
-After=kibana.target
-StartLimitIntervalSec=0
+After=network-online.target
+StartLimitIntervalSec=3
+
 [Service]
 Type=simple
 Restart=always
 RestartSec=1
-User=www-data
+User=vagrant
 ExecStart=/usr/bin/env php /app/yii chat-server/start
 
 [Install]

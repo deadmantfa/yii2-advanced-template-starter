@@ -6,8 +6,7 @@
     "framework",
     "advanced",
     "project template",
-    "Vagrant",
-    "ElasticSearch"
+    "Vagrant"
   ],
   "homepage": "http://www.yiiframework.com/",
   "type": "project",

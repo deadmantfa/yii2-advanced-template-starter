@@ -17,6 +17,7 @@ use webzop\notifications\channels\WebChannel;
 use webzop\notifications\Module as NotificationModule;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Url;
+use yii\log\FileTarget;
 use yii\web\JsonParser;
 use yii\web\MultipartFormDataParser;
 
@@ -151,7 +152,16 @@ return [
                     '@Da/User/resources/views' => '@app/views/user'
                 ]
             ]
-        ]
+        ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => FileTarget::class,
+                    'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
     ],
     'container' => [
         'definitions' => [

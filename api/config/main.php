@@ -13,6 +13,7 @@ use League\OAuth2\Server\Grant\RefreshTokenGrant;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
 use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
 use yii\caching\FileDependency;
+use yii\log\FileTarget;
 use yii\rest\UrlRule;
 use yii\web\Response;
 
@@ -32,7 +33,9 @@ return [
             'class' => Module::class,
             'privateKey' => __DIR__ . '/../oauth2/private.key',
             'publicKey' => __DIR__ . '/../oauth2/public.key',
-            'encryptionKey' => Key::loadFromAsciiSafeString('def0000095a6a564c9495753bb18ba79d1131a180ebf8dcde183c8df80d60dd2c13e3d9f04441c958e5e9fd8b87357305cf5b1cd51a2a1c1364958ac71ca0b18bd15cdc9'),
+            'encryptionKey' => Key::loadFromAsciiSafeString(
+                'def0000095a6a564c9495753bb18ba79d1131a180ebf8dcde183c8df80d60dd2c13e3d9f04441c958e5e9fd8b87357305cf5b1cd51a2a1c1364958ac71ca0b18bd15cdc9'
+            ),
             'cache' => [
                 AccessTokenRepositoryInterface::class => [
                     'cacheDuration' => 3600,
@@ -103,12 +106,11 @@ return [
             'name' => 'advanced-api',
         ],
         'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
-                    'class' => mirocow\elasticsearch\log\ElasticsearchTarget::class,
+                    'class' => FileTarget::class,
                     'levels' => ['error', 'warning'],
-                    'index' => 'yii-log',
-                    'type' => 'api',
                 ],
             ],
         ],

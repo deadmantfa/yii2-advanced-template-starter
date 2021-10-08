@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "214bcc7e19f4dd73b5f9488afd10c52f",
+  "content-hash": "f487a3675af86004a972d21b0d97676a",
   "packages": [
     {
       "name": "2amigos/2fa-library",
@@ -760,6 +760,24 @@
       "license": [
         "Apache License, Version 2.0"
       ]
+    },
+    {
+      "name": "bower-asset/x-editable",
+      "version": "1.5.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/vitalets/x-editable.git",
+        "reference": "f32802f48a33b8a7ec9cca32eec4ca844b7d39b2"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/vitalets/x-editable/zipball/f32802f48a33b8a7ec9cca32eec4ca844b7d39b2",
+        "reference": "f32802f48a33b8a7ec9cca32eec4ca844b7d39b2"
+      },
+      "require": {
+        "bower-asset/jquery": ">=1.6"
+      },
+      "type": "bower-asset"
     },
     {
       "name": "bower-asset/yii2-pjax",
@@ -8118,6 +8136,109 @@
       "time": "2020-09-03T15:32:45+00:00"
     },
     {
+      "name": "yii2mod/yii2-editable",
+      "version": "1.5",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/yii2mod/yii2-editable.git",
+        "reference": "21099a75670b6a406484afadf05ddd415774f4a6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/yii2mod/yii2-editable/zipball/21099a75670b6a406484afadf05ddd415774f4a6",
+        "reference": "21099a75670b6a406484afadf05ddd415774f4a6",
+        "shasum": ""
+      },
+      "require": {
+        "bower-asset/x-editable": "*",
+        "yiisoft/yii2": "*"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "yii2mod\\editable\\": ""
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Igor Chepurnoi",
+          "email": "igorzfort@gmail.com"
+        }
+      ],
+      "description": "Yii2 editable field extension",
+      "keywords": [
+        "yii2",
+        "yii2 editable",
+        "yii2 editable column",
+        "yii2 editable field"
+      ],
+      "support": {
+        "issues": "https://github.com/yii2mod/yii2-editable/issues",
+        "source": "https://github.com/yii2mod/yii2-editable/tree/master"
+      },
+      "time": "2018-01-15T15:00:16+00:00"
+    },
+    {
+      "name": "yii2mod/yii2-enum",
+      "version": "1.7.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/yii2mod/yii2-enum.git",
+        "reference": "7af030e19636ece5fd0adb5d6012d2b03fa63895"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/yii2mod/yii2-enum/zipball/7af030e19636ece5fd0adb5d6012d2b03fa63895",
+        "reference": "7af030e19636ece5fd0adb5d6012d2b03fa63895",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=5.6",
+        "yiisoft/yii2": "*"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "yii2mod\\enum\\": ""
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Dmitry Semenov",
+          "email": "disemx@gmail.com"
+        },
+        {
+          "name": "Igor Chepurnoi",
+          "email": "igorzfort@gmail.com"
+        }
+      ],
+      "description": "Yii2 Enumerable helpers",
+      "keywords": [
+        "enumerable helper",
+        "yii2",
+        "yii2 enum"
+      ],
+      "support": {
+        "issues": "https://github.com/yii2mod/yii2-enum/issues",
+        "source": "https://github.com/yii2mod/yii2-enum/tree/master"
+      },
+      "time": "2017-04-19T22:06:46+00:00"
+    },
+    {
       "name": "yii2mod/yii2-rbac",
       "version": "2.3",
       "source": {
@@ -8175,6 +8296,105 @@
         "source": "https://github.com/yii2mod/yii2-rbac/tree/master"
       },
       "time": "2018-01-15T15:53:16+00:00"
+    },
+    {
+      "name": "yii2mod/yii2-settings",
+      "version": "2.5",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/yii2mod/yii2-settings.git",
+        "reference": "a336b5a38143999f275f023702790b3838acc214"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/yii2mod/yii2-settings/zipball/a336b5a38143999f275f023702790b3838acc214",
+        "reference": "a336b5a38143999f275f023702790b3838acc214",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.1.0",
+        "yii2mod/yii2-editable": "*",
+        "yii2mod/yii2-enum": "*",
+        "yiisoft/yii2": "~2.0.10"
+      },
+      "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0",
+        "phpunit/phpunit": "^7.3"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "yii2mod\\settings\\": ""
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Igor Chepurnoi",
+          "email": "chepurnoi.igor@gmail.com"
+        }
+      ],
+      "description": "Yii2 Settings Module",
+      "keywords": [
+        "Settings",
+        "config",
+        "storage",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/yii2mod/yii2-settings/issues",
+        "source": "https://github.com/yii2mod/yii2-settings/tree/master"
+      },
+      "time": "2018-08-20T19:39:14+00:00"
+    },
+    {
+      "name": "yiier/yii2-user-setting",
+      "version": "v0.2.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/yiier/yii2-user-setting.git",
+        "reference": "2a5707b1f658bbe9f305b40eeeddaa7f1b2ed0bd"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/yiier/yii2-user-setting/zipball/2a5707b1f658bbe9f305b40eeeddaa7f1b2ed0bd",
+        "reference": "2a5707b1f658bbe9f305b40eeeddaa7f1b2ed0bd",
+        "shasum": ""
+      },
+      "require": {
+        "yiier/yii2-user-setting": "*",
+        "yiisoft/yii2": "~2.0.0"
+      },
+      "type": "yii2-extension",
+      "autoload": {
+        "psr-4": {
+          "yiier\\userSetting\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-4-Clause"
+      ],
+      "authors": [
+        {
+          "name": "forecho",
+          "email": "caizhenghai@gmail.com"
+        }
+      ],
+      "description": "User Settings For Yii2",
+      "keywords": [
+        "extension",
+        "setting",
+        "yii2"
+      ],
+      "support": {
+        "issues": "https://github.com/yiier/yii2-user-setting/issues",
+        "source": "https://github.com/yiier/yii2-user-setting/tree/v0.2.1"
+      },
+      "time": "2021-01-27T09:31:19+00:00"
     },
     {
       "name": "yiisoft/yii2",

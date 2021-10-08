@@ -17,9 +17,14 @@ use webzop\notifications\channels\WebChannel;
 use webzop\notifications\Module as NotificationModule;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Url;
+use yii\i18n\PhpMessageSource;
 use yii\log\FileTarget;
 use yii\web\JsonParser;
 use yii\web\MultipartFormDataParser;
+use yii2mod\settings\components\Settings;
+use yii2mod\settings\Module as SettingsModule;
+use yiier\userSetting\Module as UserSettingModule;
+use yiier\userSetting\UserSetting;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -66,6 +71,12 @@ return [
                     return [Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']];
                 }
             ],
+        ],
+        'settings' => [
+            'class' => SettingsModule::class,
+        ],
+        'userSetting' => [
+            'class' => UserSettingModule::class,
         ],
         'audit' => [
             'class' => Audit::class,
@@ -115,6 +126,12 @@ return [
         ],
     ],
     'components' => [
+        'userSetting' => [
+            'class' => UserSetting::class,
+        ],
+        'settings' => [
+            'class' => Settings::class,
+        ],
         'assetManager' => [
             'linkAssets' => true,
         ],
@@ -159,6 +176,14 @@ return [
                 [
                     'class' => FileTarget::class,
                     'levels' => ['error', 'warning'],
+                ],
+            ],
+        ],
+        'i18n' => [
+            'translations' => [
+                'yii2mod.settings' => [
+                    'class' => PhpMessageSource::class,
+                    'basePath' => '@yii2mod/settings/messages',
                 ],
             ],
         ],

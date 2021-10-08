@@ -39,7 +39,9 @@
     "webzop/yii2-notifications": "dev-master",
     "consik/yii2-websocket": "^1.0",
     "justcoded/yii2-rbac": "^1.2.1",
-    "yii2mod/yii2-rbac": "*"
+    "yii2mod/yii2-rbac": "*",
+    "yii2mod/yii2-settings": "^2.5",
+    "yiier/yii2-user-setting": "^0.2.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

@@ -32,7 +32,8 @@ class AppAsset extends AssetBundle
      * @inheritdoc
      */
     public $js = [
-        '//unpkg.com/default-passive-events@2.0.0/dist/index.js'
+        '//unpkg.com/default-passive-events@2.0.0/dist/index.js',
+        'js/settings.js'
     ];
 
     /**

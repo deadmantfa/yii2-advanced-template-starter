@@ -40,7 +40,7 @@ class TestNotification extends Notification
      */
     public function getTitle(): string
     {
-        return $this->titleText[random_int(0, 5)];
+        return $this->titleText[random_int(0, 4)];
     }
 
     /**
@@ -49,7 +49,7 @@ class TestNotification extends Notification
      */
     public function getDescription(): string
     {
-        return $this->descriptionText[random_int(0, 5)];
+        return $this->descriptionText[random_int(0, 4)];
     }
 
     public function getData(): array

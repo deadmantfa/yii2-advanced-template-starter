@@ -8,6 +8,7 @@ use common\models\LoginForm;
 use common\models\User;
 use Exception;
 use Yii;
+use yii\web\Response;
 
 /**
  * Site controller
@@ -52,9 +53,9 @@ class SiteController extends Controller
     /**
      * Logout action.
      *
-     * @return string
+     * @return Response
      */
-    public function actionLogout(): string
+    public function actionLogout(): Response
     {
         Yii::$app->user->logout();
 
@@ -89,5 +90,34 @@ class SiteController extends Controller
             }
         }
         return $this->render('notification');
+    }
+
+    /**
+     */
+    public function actionSettings(): bool
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $setting = Yii::$app->userSetting;
+        $request = Yii::$app->request;
+        $key = $request->post('key');
+        $value = $request->post('value');
+        $state = $request->post('state');
+        $userId = Yii::$app->user->id;
+        if (!$state && $setting->has($key, $userId)) {
+            $oldSetting = $setting->get($key, $userId);
+            $newSetting = trim(str_replace($value, '', $oldSetting));
+            if ($newSetting === '') {
+                $setting->remove($key, $userId);
+            } else {
+                $setting->set($key, $newSetting, $userId);
+            }
+        } elseif ($state && $setting->has($key, $userId)) {
+            $oldSetting = $setting->get($key, $userId);
+            $newSetting = $oldSetting . ' ' . $value;
+            $setting->set($key, $newSetting, $userId);
+        } else {
+            $setting->set($key, $value, $userId);
+        }
+        return true;
     }
 }

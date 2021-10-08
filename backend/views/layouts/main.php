@@ -10,10 +10,11 @@ use yii\web\View;
 AppAsset::register($this);
 
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
+$setting = Yii::$app->userSetting;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language ?>" data-color="blue">
 
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
@@ -23,13 +24,19 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed201
     <?php $this->head() ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini sidebar-collapse control-sidebar-slide-open text-sm">
+<body class="hold-transition sidebar-mini <?= $setting->get('theme|body', Yii::$app->user->id) ?> accent-<?= $setting->get('theme|color.body', Yii::$app->user->id) ?? 'primary' ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="<?= $directoryAsset . '/img/AdminLTELogo.png' ?>" alt="AdminLTELogo"
+             height="60" width="60">
+    </div>
     <?php
-    echo $this->render('header.php');
-    echo $this->render('left.php', ['directoryAsset' => $directoryAsset]);
-    echo $this->render('content.php', ['content' => $content]);
+    echo $this->render('header.php', ['setting' => $setting]);
+    echo $this->render('left.php', ['directoryAsset' => $directoryAsset, 'setting' => $setting]);
+    echo $this->render('content.php', ['content' => $content, 'setting' => $setting]);
     ?>
 </div>
 <?php $this->endBody() ?>

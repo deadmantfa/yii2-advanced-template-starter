@@ -7,6 +7,7 @@ use kartik\grid\Module as GridviewModule;
 use kartik\tree\Module as TreeModule;
 use yii\console\controllers\FixtureController;
 use yii\console\controllers\MigrateController;
+use yii2mod\rbac\ConsoleModule;
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
@@ -41,6 +42,9 @@ return [
             'class' => TreeModule::class,
             // see settings on http://demos.krajee.com/tree-manager#module
         ],
+        'rbac-mig' => [
+            'class' => ConsoleModule::class
+        ]
     ],
     'controllerMap' => [
         'fixture' => [
@@ -53,14 +57,15 @@ return [
                 '@app/migrations',
                 '@yii/rbac/migrations',
                 '@vendor/webzop/yii2-notifications/migrations',
-                '@vendor/chervand/yii2-oauth2-server/migrations'
+                '@vendor/chervand/yii2-oauth2-server/migrations',
+                '@vendor/yii2mod/yii2-settings/migrations',
+                '@yiier/userSetting/migrations/'
             ],
             'migrationNamespaces' => [
                 'Da\User\Migration',
                 'bedezign\yii2\audit\migrations',
             ],
         ],
-
         'rbac' => [
             'class' => RbacController::class,
         ],

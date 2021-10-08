@@ -52,7 +52,7 @@ use yii\helpers\Inflector;
 <aside class="control-sidebar control-sidebar-dark" style="display: none;">
 </aside>
 
-<footer class="main-footer text-sm">
+<footer class="main-footer <?= $setting->get('theme|.main-footer', Yii::$app->user->id) ?>">
     <div class="float-right d-none d-sm-block">
         <b>Version</b> 3.0.2
     </div>

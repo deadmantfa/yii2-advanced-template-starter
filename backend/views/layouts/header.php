@@ -10,7 +10,7 @@ use yii\web\View;
 
 ?>
 
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-light <?= $setting->get('theme|.main-header', Yii::$app->user->id) ?> navbar-<?= $setting->get('theme|color.navbar', Yii::$app->user->id) ?? 'primary' ?>">
     <!--     Left navbar links-->
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -21,15 +21,12 @@ use yii\web\View;
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <!-- Notifications Dropdown Menu -->
-        <?php echo NotificationWidget::widget([
-            'options' => [
-                'class' => 'nav-item dropdown',
-                'title' => 'Notifications'
-            ],
-            'countOptions' => [
-                'class' => 'badge badge-warning navbar-badge'
-            ]
-        ]) ?>
+        <?php
+
+        echo NotificationWidget::widget(['options' => ['class' => 'nav-item dropdown',
+            'title' => 'Notifications'],
+            'countOptions' => ['class' => 'badge badge-warning navbar-badge']]);
+        ?>
 
         <li class="nav-item">
 
@@ -53,7 +50,14 @@ use yii\web\View;
             ) ?>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i class="fas fa-th-large"></i></a>
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+                <i class="fas fa-th-large"></i>
+            </a>
         </li>
     </ul>
 </nav>

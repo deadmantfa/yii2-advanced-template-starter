@@ -4,15 +4,23 @@
 
 /** @var string $directoryAsset */
 
+/** @var object $setting */
+
 use webzop\notifications\widgets\WebNotifications;
 use yii\helpers\Html;
 use yii\web\View;
 
 ?>
 
-<aside class="main-sidebar sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'primary' ?> elevation-4 <?= $setting->get('theme|.main-sidebar', Yii::$app->user->id) ?>">
+<aside class="main-sidebar
+elevation-4
+sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'primary' ?>
+<?= $setting->get('theme|.main-sidebar', Yii::$app->user->id) ?>"
+>
     <?= Html::a(
-        '<img class="brand-image img-circle elevation-3' . $setting->get('theme|.brand-image', Yii::$app->user->id) . '"  src="' . ($directoryAsset . '/img/AdminLTELogo.png') .
+        '<img class="brand-image img-circle elevation-3' .
+        $setting->get('theme|.brand-image', Yii::$app->user->id) .
+        '"  src="' . ($directoryAsset . '/img/AdminLTELogo.png') .
         '" alt="APP"><span class="brand-text font-weight-light">' .
         Yii::$app->name .
         '</span>',
@@ -43,22 +51,46 @@ use yii\web\View;
         <nav class="mt-2">
             <?= dmstr\adminlte\widgets\Menu::widget(
                 [
-                    'options' => ['class' => 'nav nav-pills nav-sidebar flex-column ' . $setting->get('theme|.nav-sidebar', Yii::$app->user->id), 'data-widget' => 'treeview'],
+                    'options' => [
+                        'class' => 'nav nav-pills nav-sidebar flex-column ' .
+                            $setting->get('theme|.nav-sidebar', Yii::$app->user->id),
+                        'data-widget' => 'treeview'
+                    ],
                     'items' => [
                         ['label' => 'Menu Yii2', 'header' => true],
                         ['label' => 'Dashboard', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/site/index']],
                         ['label' => 'Chat', 'iconType' => 'fas', 'icon' => 'comment-alt', 'url' => ['/site/chat']],
-                        ['label' => 'Notification', 'iconType' => 'fas', 'icon' => 'bell', 'url' => ['/site/notification']],
+                        [
+                            'label' => 'Notification',
+                            'iconType' => 'fas',
+                            'icon' => 'bell',
+                            'url' => ['/site/notification']
+                        ],
                         [
                             'label' => 'Admin Tools',
                             'icon' => 'share',
                             'url' => '#',
                             'items' => [
-                                ['label' => 'User Management', 'iconType' => 'far', 'icon' => 'user', 'url' => ['/user/admin/index'],],
-                                ['label' => 'RBAC', 'iconType' => 'fas', 'icon' => 'universal-access', 'url' => ['/rbac'],],
+                                [
+                                    'label' => 'User Management',
+                                    'iconType' => 'far',
+                                    'icon' => 'user',
+                                    'url' => ['/user/admin/index']
+                                ],
+                                [
+                                    'label' => 'RBAC',
+                                    'iconType' => 'fas',
+                                    'icon' => 'universal-access',
+                                    'url' => ['/rbac']
+                                ],
                                 ['label' => 'Debug', 'icon' => 'tachometer-alt', 'url' => ['/debug'],],
                                 ['label' => 'Gii', 'iconType' => 'far', 'icon' => 'file-code', 'url' => ['/gii'],],
-                                ['label' => 'Audit Log', 'iconType' => 'fas', 'icon' => 'chart-bar', 'url' => ['/audit'],],
+                                [
+                                    'label' => 'Audit Log',
+                                    'iconType' => 'fas',
+                                    'icon' => 'chart-bar',
+                                    'url' => ['/audit']
+                                ],
                             ],
                             'visible' => Yii::$app->user->can('Master')
                         ],
@@ -69,7 +101,10 @@ use yii\web\View;
         <div style="position: absolute;bottom: 0;">
             <a href="#" class="text-muted">Web Notification</a>
             <?= WebNotifications::widget([
-                'template' => '<button id="js-web-push-subscribe-button" class="btn btn-secondary hide-on-collapse" disabled="disabled"></button>'
+                'template' => '<button 
+id="js-web-push-subscribe-button" 
+class="btn btn-secondary hide-on-collapse" 
+disabled="disabled"></button>'
             ]) ?>
         </div>
     </div>

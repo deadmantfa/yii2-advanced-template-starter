@@ -17,16 +17,28 @@ elevation-4
 sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'primary' ?>
 <?= $setting->get('theme|.main-sidebar', Yii::$app->user->id) ?>"
 >
-    <?= Html::a(
-        '<img class="brand-image img-circle elevation-3' .
-        $setting->get('theme|.brand-image', Yii::$app->user->id) .
-        '"  src="' . ($directoryAsset . '/img/AdminLTELogo.png') .
-        '" alt="APP"><span class="brand-text font-weight-light">' .
-        Yii::$app->name .
-        '</span>',
+
+    <?php
+    echo Html::a(
+        Html::img(
+            $directoryAsset . '/img/AdminLTELogo.png',
+            [
+                'alt' => 'App',
+                'class' => 'brand-image img-circle elevation-3 ' . $setting->get('theme|.brand-image', Yii::$app->user->id),
+            ]
+        ) .
+        Html::tag(
+            'span',
+            Yii::$app->name,
+            [
+                'class' => 'brand-text font-weight-light'
+            ]
+        ),
         Yii::$app->homeUrl,
         ['class' => 'brand-link ' . $setting->get('theme|.brand-link', Yii::$app->user->id)]
-    ) ?>
+    );
+
+    ?>
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">

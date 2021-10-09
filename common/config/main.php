@@ -6,6 +6,7 @@ use yii\caching\FileCache;
 use yii\web\AssetConverter;
 
 return [
+    'version' => '1.3.0',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',

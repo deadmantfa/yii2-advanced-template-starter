@@ -6,6 +6,7 @@
 
 use backend\assets\AppAsset;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\web\View;
 
 AppAsset::register($this);
@@ -33,12 +34,12 @@ accent-<?= $setting->get('theme|color.body', Yii::$app->user->id) ?? 'primary' ?
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="<?= $directoryAsset . '/img/AdminLTELogo.png' ?>" alt="AdminLTELogo"
+        <img class="animation__shake" src="<?= Url::to('@web/img/yii3_sign_color.svg') ?>" alt="Yii Framework Logo"
              height="60" width="60">
     </div>
     <?php
     echo $this->render('header.php', ['setting' => $setting]);
-    echo $this->render('left.php', ['directoryAsset' => $directoryAsset, 'setting' => $setting]);
+    echo $this->render('left.php', ['setting' => $setting]);
     echo $this->render('content.php', ['content' => $content, 'setting' => $setting]);
     ?>
 </div>

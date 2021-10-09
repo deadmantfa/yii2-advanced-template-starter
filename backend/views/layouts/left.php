@@ -2,12 +2,11 @@
 
 /** @var View $this */
 
-/** @var string $directoryAsset */
-
 /** @var object $setting */
 
 use webzop\notifications\widgets\WebNotifications;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\web\View;
 
 ?>
@@ -20,8 +19,8 @@ sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'p
 
     <?php
     echo Html::a(
-        Html::img(
-            $directoryAsset . '/img/AdminLTELogo.png',
+    Html::img(
+            Url::to('@web/img/yii3_sign_color.svg'),
             [
                 'alt' => 'App',
                 'class' => 'brand-image img-circle elevation-3 ' . $setting->get('theme|.brand-image', Yii::$app->user->id),
@@ -34,35 +33,35 @@ sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'p
                 'class' => 'brand-text font-weight-light'
             ]
         ),
-        Yii::$app->homeUrl,
-        ['class' => 'brand-link ' . $setting->get('theme|.brand-link', Yii::$app->user->id)]
-    );
+    Yii::$app->homeUrl,
+    ['class' => 'brand-link ' . $setting->get('theme|.brand-link', Yii::$app->user->id)]
+);
 
     ?>
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <?= Html::img(
-                    Yii::$app->user->identity->profile->getAvatarUrl(160),
-                    [
+        Yii::$app->user->identity->profile->getAvatarUrl(160),
+        [
                         'class' => 'img-circle elevation-2',
                         'alt' => Yii::$app->user->identity->username,
                     ]
-                ) ?>
+    ) ?>
             </div>
             <div class="info">
                 <div class="col">
                     <?= Html::a(
-                        Yii::$app->user->identity->profile->name,
-                        ['/user/settings/profile'],
-                        ['data-method' => 'post', 'class' => 'd-block']
-                    ) ?>
+                    Yii::$app->user->identity->profile->name,
+                    ['/user/settings/profile'],
+                    ['data-method' => 'post', 'class' => 'd-block']
+                ) ?>
                 </div>
             </div>
         </div>
         <nav class="mt-2">
             <?= dmstr\adminlte\widgets\Menu::widget(
-                [
+                        [
                     'options' => [
                         'class' => 'nav nav-pills nav-sidebar flex-column ' .
                             $setting->get('theme|.nav-sidebar', Yii::$app->user->id),
@@ -108,7 +107,7 @@ sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'p
                         ],
                     ],
                 ]
-            ) ?>
+                    ) ?>
         </nav>
         <div style="position: absolute;bottom: 0;">
             <a href="#" class="text-muted">Web Notification</a>

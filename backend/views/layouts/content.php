@@ -54,8 +54,8 @@ use yii\helpers\Inflector;
 
 <footer class="main-footer <?= $setting->get('theme|.main-footer', Yii::$app->user->id) ?>">
     <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.0.2
+        <b>Version</b> <?= Yii::$app->version ?>
     </div>
-    <strong>Copyright © <?= date('Y') ?>&nbsp;<a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <strong>Copyright © <?= date('Y') ?>&nbsp;<a href="https://yiiframework.com">Yii2 Framework</a>.</strong> All rights
     reserved.
 </footer>

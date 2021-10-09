@@ -30,7 +30,7 @@ $setting = Yii::$app->userSetting;
 </head>
 
 <body class="hold-transition
-<?= $setting->get('theme|body', Yii::$app->user->id) ?>
+<?= $setting->get('theme|body', Yii::$app->user->id) ?> 
 accent-<?= $setting->get('theme|color.body', Yii::$app->user->id) ?? 'primary' ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">

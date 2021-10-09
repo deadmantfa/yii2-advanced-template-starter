@@ -13,13 +13,13 @@ use yii\web\View;
 
 <aside class="main-sidebar
 elevation-4
-sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'primary' ?>
+sidebar-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'dark-primary' ?>
 <?= $setting->get('theme|.main-sidebar', Yii::$app->user->id) ?>"
 >
 
     <?php
     echo Html::a(
-    Html::img(
+        Html::img(
             Url::to('@web/img/yii3_sign_color.svg'),
             [
                 'alt' => 'App',
@@ -42,26 +42,26 @@ sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'p
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <?= Html::img(
-        Yii::$app->user->identity->profile->getAvatarUrl(160),
-        [
+                    Yii::$app->user->identity->profile->getAvatarUrl(160),
+                    [
                         'class' => 'img-circle elevation-2',
                         'alt' => Yii::$app->user->identity->username,
                     ]
-    ) ?>
+                ) ?>
             </div>
             <div class="info">
                 <div class="col">
                     <?= Html::a(
-                    Yii::$app->user->identity->profile->name,
-                    ['/user/settings/profile'],
-                    ['data-method' => 'post', 'class' => 'd-block']
-                ) ?>
+                        Yii::$app->user->identity->profile->name,
+                        ['/user/settings/profile'],
+                        ['data-method' => 'post', 'class' => 'd-block']
+                    ) ?>
                 </div>
             </div>
         </div>
         <nav class="mt-2">
             <?= dmstr\adminlte\widgets\Menu::widget(
-                        [
+                [
                     'options' => [
                         'class' => 'nav nav-pills nav-sidebar flex-column ' .
                             $setting->get('theme|.nav-sidebar', Yii::$app->user->id),
@@ -107,7 +107,7 @@ sidebar-dark-<?= $setting->get('theme|color.sidebar', Yii::$app->user->id) ?? 'p
                         ],
                     ],
                 ]
-                    ) ?>
+            ) ?>
         </nav>
         <div style="position: absolute;bottom: 0;">
             <a href="#" class="text-muted">Web Notification</a>

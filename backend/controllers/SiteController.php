@@ -103,6 +103,10 @@ class SiteController extends Controller
         $value = $request->post('value');
         $state = $request->post('state');
         $userId = Yii::$app->user->id;
+        if ($state === null) {
+            $setting->set($key, $value, $userId);
+            return true;
+        }
         if (!$state && $setting->has($key, $userId)) {
             $oldSetting = $setting->get($key, $userId);
             $newSetting = trim(str_replace($value, '', $oldSetting));

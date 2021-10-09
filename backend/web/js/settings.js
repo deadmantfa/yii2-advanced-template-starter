@@ -173,7 +173,7 @@ async function saveSettings(key, value, state) {
         $sidebar.addClass(sidebar_class)
         $('.sidebar').removeClass('os-theme-light').addClass('os-theme-dark')
 
-        saveSettings('theme|color.sidebar', color.replace('bg-', ''), true).then(r => r);
+        saveSettings('theme|color.sidebar', 'light-' + color.replace('bg-', ''), null).then(r => r);
     });
     const $sidebar = $('.control-sidebar');
     const $container = $('<div />', {
@@ -591,7 +591,7 @@ async function saveSettings(key, value, state) {
 
         $main_header.addClass(color)
 
-        saveSettings('theme|color.navbar', color, true);
+        saveSettings('theme|color.navbar', color, null).then(r => r);
     });
 
     let active_navbar_color = null;
@@ -625,7 +625,7 @@ async function saveSettings(key, value, state) {
         })
 
         $body.addClass(accent_class)
-        saveSettings('theme|color.accent', color, true).then(r => r);
+        saveSettings('theme|color.accent', color, null).then(r => r);
     })
 
     $container.append($accesnt_variants_select)
@@ -659,7 +659,7 @@ async function saveSettings(key, value, state) {
         $sidebar_light_variants.find('option').prop('selected', false)
         $sidebar.addClass(sidebar_class)
         $('.sidebar').removeClass('os-theme-dark').addClass('os-theme-light')
-        saveSettings('theme|color.sidebar', color.replace('bg-', ''), true);
+        saveSettings('theme|color.sidebar', 'dark-' + color.replace('bg-', ''), null).then(r => r);
     })
     $container.append($sidebar_dark_variants)
 
@@ -732,7 +732,7 @@ async function saveSettings(key, value, state) {
         }
 
         $logo.addClass(color)
-        saveSettings('theme|color.brandlink', color, true);
+        saveSettings('theme|color.brandlink', color, null).then(r => r);
     });
     $container.append($brand_variants)
 

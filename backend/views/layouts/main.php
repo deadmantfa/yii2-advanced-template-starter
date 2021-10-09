@@ -22,6 +22,9 @@ $setting = Yii::$app->userSetting;
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>

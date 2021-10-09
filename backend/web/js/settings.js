@@ -130,7 +130,7 @@ async function saveSettings(key, value, state) {
         return string.charAt(0).toUpperCase() + string.slice(1)
     }
 
-    function createSkinBlock(colors, callback, noneSelected) {
+    function createSkinBlock(colors, noneSelected) {
         const $block = $('<select />', {
             class: noneSelected ? 'custom-select mb-3 border-0' : 'custom-select mb-3 text-light border-0 ' + colors[0].replace(/accent-|navbar-/, 'bg-')
         });
@@ -139,9 +139,6 @@ async function saveSettings(key, value, state) {
             const $default = $('<option />', {
                 text: 'None Selected'
             });
-            if (callback) {
-                $default.on('click', callback)
-            }
 
             $block.append($default)
         }
@@ -153,17 +150,16 @@ async function saveSettings(key, value, state) {
             });
 
             $color.data('color', color)
-            if (callback) {
-                $color.on('click', callback);
-            }
             $block.append($color);
-        })
 
+        })
         return $block
     }
 
-    const $sidebar_light_variants = createSkinBlock(sidebar_colors, function () {
-        const color = $(this).data('color');
+
+    const $sidebar_light_variants = createSkinBlock(sidebar_colors, true);
+    $sidebar_light_variants.on('change', function () {
+        const color = $(this).find(":selected").data('color');
         const sidebar_class = 'sidebar-light-' + color.replace('bg-', '');
         const $sidebar = $('.main-sidebar');
         sidebar_skins.forEach(function (skin) {
@@ -177,9 +173,8 @@ async function saveSettings(key, value, state) {
         $sidebar.addClass(sidebar_class)
         $('.sidebar').removeClass('os-theme-light').addClass('os-theme-dark')
 
-        saveSettings('theme|color.sidebar', color.replace('bg-', ''), true);
-    }, true);
-
+        saveSettings('theme|color.sidebar', color.replace('bg-', ''), true).then(r => r);
+    });
     const $sidebar = $('.control-sidebar');
     const $container = $('<div />', {
         class: 'p-3 control-sidebar-content'
@@ -575,8 +570,9 @@ async function saveSettings(key, value, state) {
         class: 'd-flex'
     });
     const navbar_all_colors = navbar_dark_skins.concat(navbar_light_skins);
-    const $navbar_variants_colors = createSkinBlock(navbar_all_colors, function () {
-        const color = $(this).data('color');
+    const $navbar_variants_colors = createSkinBlock(navbar_all_colors);
+    $navbar_variants_colors.on('change', function () {
+        const color = $(this).find(':selected').data('color');
         const $main_header = $('.main-header');
         $main_header.removeClass('navbar-dark').removeClass('navbar-light')
         navbar_all_colors.forEach(function (color) {
@@ -619,8 +615,9 @@ async function saveSettings(key, value, state) {
         class: 'd-flex'
     });
     $container.append($accent_variants)
-    $container.append(createSkinBlock(accent_colors, function () {
-        const color = $(this).data('color');
+    const $accesnt_variants_select = createSkinBlock(accent_colors, true)
+    $accesnt_variants_select.on('change', function () {
+        const color = $(this).find(':selected').data('color');
         const accent_class = color;
         const $body = $('body');
         accent_colors.forEach(function (skin) {
@@ -628,9 +625,10 @@ async function saveSettings(key, value, state) {
         })
 
         $body.addClass(accent_class)
-        saveSettings('theme|color.accent', color, true);
-    }, true))
+        saveSettings('theme|color.accent', color, true).then(r => r);
+    })
 
+    $container.append($accesnt_variants_select)
     let active_accent_color = null;
     $('body')[0].classList.forEach(function (className) {
         if (accent_colors.indexOf(className) > -1 && active_accent_color === null) {
@@ -646,8 +644,9 @@ async function saveSettings(key, value, state) {
         class: 'd-flex'
     });
     $container.append($sidebar_variants_dark)
-    const $sidebar_dark_variants = createSkinBlock(sidebar_colors, function () {
-        const color = $(this).data('color');
+    const $sidebar_dark_variants = createSkinBlock(sidebar_colors, true);
+    $sidebar_dark_variants.on('change', function () {
+        const color = $(this).find(':selected').data('color');
         const sidebar_class = 'sidebar-dark-' + color.replace('bg-', '');
         const $sidebar = $('.main-sidebar');
         sidebar_skins.forEach(function (skin) {
@@ -661,7 +660,7 @@ async function saveSettings(key, value, state) {
         $sidebar.addClass(sidebar_class)
         $('.sidebar').removeClass('os-theme-dark').addClass('os-theme-light')
         saveSettings('theme|color.sidebar', color.replace('bg-', ''), true);
-    }, true);
+    })
     $container.append($sidebar_dark_variants)
 
     let active_sidebar_dark_color = null;
@@ -711,8 +710,9 @@ async function saveSettings(key, value, state) {
         })
     });
 
-    const $brand_variants = createSkinBlock(logo_skins, function () {
-        let color = $(this).data('color')
+    const $brand_variants = createSkinBlock(logo_skins, true).append($clear_btn);
+    $brand_variants.on('change', function () {
+        let color = $(this).find(':selected').data('color')
         let $logo = $('.brand-link')
 
         if (color === 'navbar-light' || color === 'navbar-white') {
@@ -733,7 +733,7 @@ async function saveSettings(key, value, state) {
 
         $logo.addClass(color)
         saveSettings('theme|color.brandlink', color, true);
-    }, true).append($clear_btn);
+    });
     $container.append($brand_variants)
 
     let active_brand_color = null;

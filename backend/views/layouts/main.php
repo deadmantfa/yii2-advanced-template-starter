@@ -15,7 +15,7 @@ $setting = Yii::$app->userSetting;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" data-color="blue">
+<html lang="<?= Yii::$app->language ?>">
 
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
@@ -25,7 +25,9 @@ $setting = Yii::$app->userSetting;
     <?php $this->head() ?>
 </head>
 
-<body class="hold-transition sidebar-mini <?= $setting->get('theme|body', Yii::$app->user->id) ?> accent-<?= $setting->get('theme|color.body', Yii::$app->user->id) ?? 'primary' ?>">
+<body class="hold-transition
+<?= $setting->get('theme|body', Yii::$app->user->id) ?>
+accent-<?= $setting->get('theme|color.body', Yii::$app->user->id) ?? 'primary' ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
 

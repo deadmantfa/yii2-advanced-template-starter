@@ -9,7 +9,7 @@ use yii\bootstrap4\Html;
 class User extends BaseUser
 {
     public const STATUS_ACTIVE = 1;
-    const STATUS_INACTIVE = 0;
+    public const STATUS_INACTIVE = 0;
 
     /**
      * @param int $id user_id from audit_entry table
